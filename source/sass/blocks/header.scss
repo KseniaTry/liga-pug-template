@@ -1,13 +1,110 @@
 .header {
-  padding: 28px 0;
+  background-color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  padding: 38px 0 49px; // для десктопа
 
-  .container {
+  &__main-wrapper {
+    width: 66.5%;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 22%;
+    row-gap: 31px;
   }
 
   &__logo {
     color: $color-default-white;
+
+    &:hover svg {
+      opacity: 0.8;
+    }
+  }
+
+  &__accordion {
+    width: 98.4%;
+  }
+
+  &__accordion-list {
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 0.7px solid #eaeaea;
+  }
+
+  &__accordion-item {
+    position: relative;
+    padding-right: 35px;
+    // transition: all 0.3s;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 9px;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      mask-image: url("./../../img/svg/triangle-down.svg");
+      mask-size: 10px 10px;
+      background-color: #bababa;
+    }
+  }
+
+  &__accordion-item--opened,
+  &__accordion-item:hover {
+    &::after {
+      transform: rotate(180deg);
+      background-color: $color-accent-main;
+    }
+  }
+
+  &__accordion-item--opened &__accordion-link,
+  &__accordion-item:hover &__accordion-link {
+    color: $color-accent-main;
+    font-weight: 600;
+  }
+
+  &__accordion-link {
+    color: #bababa;
+    font-weight: 500;
+    line-height: 100%;
+  }
+
+  &__accordion-content-list {
+    display: none;
+  }
+
+  &__accordion-content-list--opened,
+  &__accordion-item:hover .header__accordion-content-list {
+    display: block;
+    position: absolute;
+    z-index: 10;
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    padding: 15px 0 37px;
+    background-color: inherit;
+  }
+
+  &__accordion-content-item {
+    // display: none;
+  }
+
+  &__accordion-content-link {
+    // display: none;
+
+    font-size: 10px;
+    line-height: 146%;
+    font-weight: 400;
+    color: $color-default-black;
   }
 }

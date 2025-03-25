@@ -1,12 +1,18 @@
 .main-nav {
-  &__list {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
 
+  width: 40.4%;
+
+  &__wrapper {}
+
+  &__list {
+    margin: 0;
+    padding: 0;
     list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 13%;
   }
 
   &__item {
@@ -14,10 +20,12 @@
   }
 
   &__link {
-    color: $color-default-white;
+    color: $color-default-black;
+    font-weight: 500;
 
     &.is-active {
-      opacity: 0.6;
+      color: $color-accent-main;
+      font-weight: 600;
     }
   }
 
