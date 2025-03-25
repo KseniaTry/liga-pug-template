@@ -282,10 +282,15 @@ mixin header(headerMods, currentUrl)
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo
-          +icon("logo", 118, 38)
+           picture
+            source(media="(min-width: 768px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
+            img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
+
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
-          +icon("logo", 118, 38)
+          picture
+            source(media="(min-width: 768px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
+            img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
       nav.main-nav
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
           +icon("icon-burger", 20, 20)
