@@ -280,7 +280,7 @@ mixin header(headerMods, currentUrl)
         ]
       }
 
-  header.header(class=headerMods)
+  header.header(class=headerMods)(data-name="header")
     div.header__main-wrapper
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
@@ -295,7 +295,7 @@ mixin header(headerMods, currentUrl)
             source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
             img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")#menu-button
+        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-name="menu-button")
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
@@ -305,13 +305,13 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
-      div.header__menu#menu
-        ul.header__menu-list#menu-list
+      div.header__menu(data-name="menu")
+        ul.header__menu-list(data-name="menu-list")
           each item in data.items
-            li.header__menu-item#menu-item
+            li.header__menu-item(data-name="menu-item")
               a.header__menu-link(href=item.href)= item.title
               if item.sublevel
-                ul.header__menu-content-list#menu-content-list
+                ul.header__menu-content-list(data-name="menu-content-list")
                   each subitem in item.items
                     li.header__menu-content-item
                       a.header__menu-content-link(href=subitem.href)= subitem.title

@@ -1,13 +1,14 @@
-const menuItems = document.querySelectorAll('#menu-item');
+const menuItems = document.querySelectorAll('[data-name="menu-item"]');
 const breakpoint = window.matchMedia(`(min-width:1024px)`);
-const menuButton = document.querySelector('#menu-button');
-const menu = document.querySelector('#menu');
+const menuButton = document.querySelector('[data-name="menu-button"]');
+const menu = document.querySelector('[data-name="menu"]');
+const header = document.querySelector('[data-name="header"]');
 
 const closeMenu = () => {
   menuItems.forEach((item) => {
     if (item.classList.contains('is-open')) {
       item.classList.remove('is-open');
-      const menuContent = item.querySelector('#menu-content-list');
+      const menuContent = item.querySelector('[data-name="menu-content-list"]');
       menuContent.classList.remove('is-open');
     }
   })
@@ -18,7 +19,7 @@ const openItem = (items) => {
     item.addEventListener(('click'), (evt) => {
       // evt.stopPropagation();
       // closeMenu();
-      const menuContent = item.querySelector('#menu-content-list');
+      const menuContent = item.querySelector('[data-name="menu-content-list"]');
       item.classList.toggle('is-open');
       menuContent.classList.toggle('is-open');
     })
@@ -33,6 +34,7 @@ const openMenu = () => {
       evt.preventDefault();
       menuButton.classList.toggle('is-open');
       menu.classList.toggle('is-open');
+      header.classList.toggle('is-open');
       openItem(menuItems);
     })
   }
@@ -40,7 +42,7 @@ const openMenu = () => {
 
 const closeMenuOnPageClick = () => {
   document.body.addEventListener('click', (evt) => {
-    if (evt.target.closest('.header__menu') === null) {
+    if (evt.target.closest('[data-name="menu"]') === null) {
       closeMenu();
     }
   });
