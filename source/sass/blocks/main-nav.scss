@@ -1,8 +1,15 @@
 .main-nav {
-
   width: 40.4%;
 
-  &__wrapper {}
+  @include vp-767 {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper {
+  }
 
   &__list {
     margin: 0;
@@ -17,11 +24,23 @@
 
   &__item {
     margin-right: 20px;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      display: block;
+    }
   }
 
   &__link {
     color: $color-default-black;
     font-weight: 500;
+
+    @include vp-767 {
+
+    }
 
     &.is-active {
       color: $color-accent-main;
@@ -31,5 +50,17 @@
 
   &__toggle {
     display: none;
+
+    @include vp-767 {
+      display: block;
+      width: 22px;
+      height: 12px;
+      order: 2;
+      border: none;
+      background-color: $color-default-black;
+      mask-image: url(./../../img/svg/burger-menu.svg);
+      mask-repeat: no-repeat;
+      mask-size: 22px 12px;
+    }
   }
 }
