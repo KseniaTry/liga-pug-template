@@ -1,9 +1,10 @@
 .header {
-  padding: 38px 0 49px; // для десктопа
+  padding: 38px 0 49px;
   background-color: $color-default-white;
 
   @include vp-767 {
-    padding: 20px 0;
+    padding: 13px 0 21px;
+    border-bottom: 0.7px solid $color-light-gray;
   }
 
   &__main-wrapper {
@@ -31,10 +32,22 @@
   }
 
   &__menu {
+    position: relative;
     width: 98.4%;
 
     @include vp-767 {
       display: none;
+    }
+  }
+
+  &__menu.is-open {
+    @include vp-767 {
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: $color-default-white;
     }
   }
 
@@ -45,15 +58,26 @@
     list-style-type: none;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
-    border-top: 0.7px solid #eaeaea;
+    border-top: 0.7px solid $color-light-gray;
+
+    @include vp-767 {
+      flex-direction: column;
+      padding-top: 0;
+    }
   }
 
   &__menu-item {
     position: relative;
     padding-right: 35px;
     // transition: all 0.3s;
+
+    @include vp-767 {
+      padding: 23px 20px;
+      border-bottom: 0.7px solid $color-light-gray;
+    }
 
     &::after {
       content: "";
@@ -65,7 +89,15 @@
       height: 10px;
       mask-image: url("./../../img/svg/triangle-down.svg");
       mask-size: 10px 10px;
-      background-color: #bababa;
+      background-color: $color-marble-gray;
+
+      @include vp-767 {
+        top: 28px;
+        right: 20px;
+        width: 8px;
+        height: 8px;
+        mask-size: 8px 8px;
+      }
     }
   }
 
@@ -84,9 +116,14 @@
   }
 
   &__menu-link {
-    color: #bababa;
+    color: $color-marble-gray;
     font-weight: 500;
     line-height: 100%;
+
+    @include vp-767 {
+     // font-family: GILROY;
+      font-size: 14px;
+    }
   }
 
   &__menu-content-list {
@@ -103,11 +140,18 @@
     padding: 0;
     list-style-type: none;
 
-    padding: 15px 0 37px;
+    padding: 15px 0 22px;
     background-color: inherit;
+
+    @include vp-767 {
+      position: static;
+      padding-bottom: 0;
+     }
   }
 
-  &__menu-content-item {}
+  &__menu-content-item {
+    margin-bottom: 15px;
+  }
 
   &__menu-content-link {
     font-size: 10px;

@@ -1,4 +1,7 @@
 const menuItems = document.querySelectorAll('#menu-item');
+const breakpoint = window.matchMedia(`(min-width:1024px)`);
+const menuButton = document.querySelector('#menu-button');
+const menu = document.querySelector('#menu');
 
 const closeMenu = () => {
   menuItems.forEach((item) => {
@@ -10,15 +13,29 @@ const closeMenu = () => {
   })
 }
 
-const openMenu = () => {
-  menuItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      closeMenu();
+const openItem = (items) => {
+  items.forEach((item) => {
+    item.addEventListener(('click'), (evt) => {
+      // evt.stopPropagation();
+      // closeMenu();
       const menuContent = item.querySelector('#menu-content-list');
       item.classList.toggle('is-open');
       menuContent.classList.toggle('is-open');
     })
   })
+}
+
+const openMenu = () => {
+  if (breakpoint.matches) {
+    openItem(menuItems);
+  } else {
+    menuButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      menuButton.classList.toggle('is-open');
+      menu.classList.toggle('is-open');
+      openItem(menuItems);
+    })
+  }
 }
 
 const closeMenuOnPageClick = () => {

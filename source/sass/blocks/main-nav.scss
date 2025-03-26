@@ -39,7 +39,9 @@
     font-weight: 500;
 
     @include vp-767 {
-
+      font-size: 14px;
+      line-height: 100%;
+      font-weight: 600;
     }
 
     &.is-active {
@@ -59,8 +61,16 @@
       border: none;
       background-color: $color-default-black;
       mask-image: url(./../../img/svg/burger-menu.svg);
+      mask-position: center;
       mask-repeat: no-repeat;
       mask-size: 22px 12px;
+
+      &.is-open {
+        width: 25px;
+        height: 25px;
+        mask-image: url(./../../img/svg/close-menu.svg);
+        mask-size: 25px 25px;
+      }
     }
   }
 }

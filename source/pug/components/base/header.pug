@@ -295,8 +295,7 @@ mixin header(headerMods, currentUrl)
             source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
             img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")#menu-button
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
