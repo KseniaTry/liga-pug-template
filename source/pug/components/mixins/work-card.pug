@@ -1,0 +1,14 @@
+mixin work-card(card)
+  article.work-card
+      .work-card__title-wrapper
+        h2.work-card__title= card.title
+        p.work-card__description= card.description
+        +rate(5, 4)
+      .work-card__stats-wrapper
+        p.work-card__salary= `${card.salary} рублей`
+        p.work-card__offers= `${card.offersCount} компания`
+      .work-card__popularity-wrapper
+        each item in card.platforms
+          .work-card__popularity-item(data-school=item.name, data-rate=item.rate)= item.name
+
+

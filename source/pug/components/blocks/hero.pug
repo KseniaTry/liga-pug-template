@@ -1,5 +1,30 @@
 mixin hero()
+
+  -
+    const workCard =
+      {
+        title: "UI/UX-designer",
+        description: "UX/UI-дизайнер — одна из самых востребованных профессий 2020 года",
+        salary: 120000,
+        offersCount: 1561,
+        rate: 5,
+        platforms: [
+          { name: "Skillbox", rate: "60%" },
+          { name: "SkillFactory", rate: "70%" },
+          { name: "GeekBrains", rate: "40%" },
+          { name: "Нетология", rate: "70%" },
+          { name: "SkyPro", rate: "50%" }
+        ]
+      }
+
   section.hero
     .container
-      h1.hero__title FindEdu - все для выбора новой профессии в одном месте
-      p.hero__text
+      .hero__text-wrapper
+        h1.hero__title FindEdu - все для выбора новой профессии в одном месте
+        p Изучение тем на вебинарах с преподавателями, личные консультации с наставником. После прохождения курса с наставником. После прохождения курса
+        a.hero__button(href="#")= "Сравнить курсы"
+      .hero__image
+        +img("content", "excited-man", "png", 646, 578, "Радующийся мужчина в оранжевом свитере")
+      +work-card(workCard)
+
+
