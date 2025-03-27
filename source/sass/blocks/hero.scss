@@ -1,6 +1,11 @@
 .hero {
   padding: 20px 0 300px;
 
+  @include vp-767 {
+    padding: 55px 0 120px;
+  }
+
+
   &__main-wrapper {
     position: relative;
     display: flex;
@@ -13,6 +18,11 @@
     margin-top: 139px;
     width: 53%;
 
+    @include vp-767 {
+      margin-top: 0;
+      width: auto;
+    }
+
     h1 {
       margin: 0;
       font-size: 50px;
@@ -20,6 +30,13 @@
       font-weight: 800;
       color: $color-seal-brown;
       margin-bottom: 35px;
+
+      @include vp-767 {
+        width: auto;
+        font-size: 28px;
+        line-height: 121%;
+        margin-bottom: 33px;
+      }
     }
 
     p {
@@ -30,20 +47,36 @@
       font-weight: 500;
       color: $color-nobel;
       margin-bottom: 47px;
+
+      @include vp-767 {
+        width: 93%;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 25px;
+      }
     }
   }
 
-  &__button {}
+  &__button {
+  }
 
   &__image-wrapper {
     margin-right: 43px;
     width: 502px;
     height: 590px;
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   &__work-card {
     position: absolute;
     bottom: -192px;
     right: 20.4%;
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }
