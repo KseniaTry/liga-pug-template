@@ -9,22 +9,26 @@ mixin hero()
         offersCount: 1561,
         rate: 5,
         platforms: [
-          { name: "Skillbox", rate: "60%" },
-          { name: "SkillFactory", rate: "70%" },
-          { name: "GeekBrains", rate: "40%" },
-          { name: "Нетология", rate: "70%" },
-          { name: "SkyPro", rate: "50%" }
+          { name: "skillbox", rate: "60%" },
+          { name: "skillfactory", rate: "70%" },
+          { name: "geekbrains", rate: "40%" },
+          { name: "netology", rate: "70%" },
+          { name: "skypro", rate: "50%" }
         ]
       }
 
   section.hero
-    .container
+    .container.hero__main-wrapper
       .hero__text-wrapper
-        h1.hero__title FindEdu - все для выбора новой профессии в одном месте
+        h1
+          |FindEdu - все для
+          br
+          |выбора новой профессии в одном месте
         p Изучение тем на вебинарах с преподавателями, личные консультации с наставником. После прохождения курса с наставником. После прохождения курса
-        a.hero__button(href="#")= "Сравнить курсы"
-      .hero__image
-        +img("content", "excited-man", "png", 646, 578, "Радующийся мужчина в оранжевом свитере")
-      +work-card(workCard)
+        a.hero__button(href="#").btn= "Сравнить курсы"
+      .hero__image-wrapper
+        +picture("content/hero", "excited-man", "png", 502, 590, "Радующийся мужчина в оранжевом свитере")
+      .hero__work-card
+        +work-card(workCard)
 
 

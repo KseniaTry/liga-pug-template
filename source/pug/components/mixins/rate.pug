@@ -1,5 +1,5 @@
 mixin rate(starsCount, rate)
-  div.work-card__rate.rate
+  div.rate
     span.visually-hidden= `${rate} звезды`
     - for (var i = 1; i <= rate; i++)
       span.rate__star.rate-active

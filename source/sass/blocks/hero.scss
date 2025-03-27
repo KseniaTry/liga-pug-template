@@ -1,0 +1,46 @@
+.hero {
+  padding: 20px 0 50px;
+
+  &__main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__text-wrapper {
+    margin-top: 142px;
+    width: 53%;
+
+    h1 {
+      margin: 0;
+      font-size: 50px;
+      line-height: 120%; // по макету было 100% но так не проходит по PixelPerfect
+      font-weight: 800;
+      color: $color-seal-brown;
+      margin-bottom: 35px;
+    }
+
+    p {
+      margin: 0;
+      width: 67%;
+      font-size: 16px;
+      line-height: 143%;
+      font-weight: 500;
+      color: $color-nobel;
+      margin-bottom: 47px;
+    }
+  }
+
+  &__button {}
+
+  &__image-wrapper {
+    margin-right: 43px;
+    width: 502px;
+    height: 590px;
+  }
+
+  &__work-card {
+
+  }
+}

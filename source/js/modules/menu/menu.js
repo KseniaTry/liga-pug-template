@@ -18,7 +18,7 @@ const openItem = (items) => {
   items.forEach((item) => {
     item.addEventListener(('click'), (evt) => {
       // evt.stopPropagation();
-      // closeMenu();
+      closeMenu();
       const menuContent = item.querySelector('[data-name="menu-content-list"]');
       item.classList.toggle('is-open');
       menuContent.classList.toggle('is-open');

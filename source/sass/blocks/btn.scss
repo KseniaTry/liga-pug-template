@@ -1,17 +1,44 @@
 .btn {
+  position: relative;
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 30px 116px 30px 60px;
 
-  color: $color-default-white;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 500;
+  color: $color-snow;
 
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: $color-accent-main;
+  border: 1px solid transparent;
+  border-radius: 20px;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 46px;
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-color: #678CF8;
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 30px;
+    right: 58px;
+    width: 18px;
+    height: 18px;
+    background-color: $color-snow;
+    mask-image: url(../../img/svg/button-icon.svg);
+    mask-size: 18px 18px;
+    z-index: 2;
   }
 
   &:disabled {

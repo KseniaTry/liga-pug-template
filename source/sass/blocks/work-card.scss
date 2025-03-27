@@ -1,1 +1,90 @@
+.work-card {
+  padding: 29px 28px 15px 20px;
+  width: 488px;
+  background-color: $color-magnolia;
+  box-shadow: 0 3px 37px 0 rgba(0, 0, 0, 0.06);
+  border: 0.74px solid $color-gainsboro;
+  border-radius: 18.66px;
 
+  &__title-wrapper {
+    h2 {
+      font-family: $ff-gilroy;
+      font-size: 20px;
+      line-height: 100%;
+      font-weight: 600;
+      color: $color-black;
+    }
+
+    p {
+      color: $color-dim-gray;
+      font-family: $ff-gilroy;
+      font-size: 15px;
+      line-height: 100%;
+    }
+  }
+
+  &__rate {}
+
+  &__stats-wrapper {
+    p {
+      font-family: $ff-gilroy;
+      font-size: 15px;
+      line-height: 100%;
+      font-weight: 600;
+    }
+  }
+
+  &__salary {
+    color: $color-black;
+  }
+
+  &__offers {
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  &__popularity-wrapper {}
+
+  &__popularity-item {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+    margin-bottom: 15px;
+  }
+
+  &__logo-wrapper {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
+
+  &__platform-rate {
+    position: relative;
+    height: 18px;
+    border-radius: 5px;
+  }
+
+  &__platform-rate[data-platform="skillbox"] {
+    width: 186px;
+    background-image: linear-gradient(to right, #323BE1 60%, #DFE1FF 60%);
+  }
+
+  &__platform-rate[data-platform="skillfactory"] {
+    width: 273px;
+    background-image: linear-gradient(to right, #5CAF56 60%, rgba(130, 217, 124, 0.3) 60%);
+  }
+
+  &__platform-rate[data-platform="geekbrains"] {
+    width: 347px;
+    background-image: linear-gradient(to right, #222222 60%, #e7e7e7 60%);
+  }
+
+  &__platform-rate[data-platform="netology"] {
+    width: 276px;
+    background-image: linear-gradient(to right, #eb236b 60%, #ffcfe0 60%);
+  }
+
+  &__platform-rate[data-platform="skypro"] {
+    width: 302px;
+    background-image: linear-gradient(to right, #54bff9 60%, #cdedff 60%);
+  }
+}
