@@ -1,0 +1,21 @@
+.rate {
+  width: 79px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  &__star {}
+
+  &__star--active::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #fecd1e;
+    mask-image: url(../../img/svg/star.svg);
+    mask-size: 14px 14px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+}

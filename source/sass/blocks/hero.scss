@@ -1,7 +1,8 @@
 .hero {
-  padding: 20px 0 50px;
+  padding: 20px 0 300px;
 
   &__main-wrapper {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -9,7 +10,7 @@
   }
 
   &__text-wrapper {
-    margin-top: 142px;
+    margin-top: 139px;
     width: 53%;
 
     h1 {
@@ -41,6 +42,8 @@
   }
 
   &__work-card {
-
+    position: absolute;
+    bottom: -192px;
+    right: 20.4%;
   }
 }

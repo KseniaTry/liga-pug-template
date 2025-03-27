@@ -2,7 +2,7 @@ mixin rate(starsCount, rate)
   div.rate
     span.visually-hidden= `${rate} звезды`
     - for (var i = 1; i <= rate; i++)
-      span.rate__star.rate-active
+      span.rate__star.rate__star--active
     - for (var i = 1; i <= starsCount - rate; i++)
       span.rate__star
 
