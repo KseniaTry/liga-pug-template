@@ -29,5 +29,11 @@ mixin directions()
 
   section.directions
     .container.directions__main-wrapper
-      each direction in directionsList
-        +direction-card(direction.title, direction.items)
+      h2.directions__title= "Выбери направление"
+      .directions__swiper
+        .directions__swiper-wrapper
+          each direction in directionsList
+            .directions__slide
+              a.directions__link(href="#")
+                span.visually-hidden= `Подробнее о направлении "${direction.title}"`
+                +direction-card(direction.title, direction.items)
