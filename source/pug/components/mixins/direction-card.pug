@@ -1,0 +1,7 @@
+mixin direction-card(title, items)
+  .direction-card
+    h2.direction__title= title
+    ul.directions__list
+      each item in items
+        li.directions__item
+          p.directions__text= item

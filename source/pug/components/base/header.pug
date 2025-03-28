@@ -281,7 +281,7 @@ mixin header(headerMods, currentUrl)
       }
 
   header.header(class=headerMods)(data-name="header")
-    div.header__main-wrapper
+    .header__main-wrapper
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo
@@ -304,7 +304,7 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
-      div.header__menu(data-name="menu")
+      .header__menu(data-name="menu")
         ul.header__menu-list(data-name="menu-list")
           each item in data.items
             li.header__menu-item(data-name="menu-item")
