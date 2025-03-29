@@ -1,6 +1,29 @@
 .directions {
+  padding: 0 0 298px;
 
-  &__main-wrapper {}
+  &__title {
+    margin: 0;
+    margin-bottom: 52px;
 
-  &__card {}
+    font-family: $ff-gilroy;
+    font-size: 40px;
+    line-height: 100%;
+    font-weight: 700;
+    color: #302828;
+  }
+
+  &__swiper {}
+
+  &__swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 47px;
+  }
+
+  &__card {
+    width: 30%;
+  }
 }

@@ -4,7 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { initMenu } from './modules/menu/menu.js';
-import { initDirectionsSlider } from './modules/directions.js';
+import { initDirectionsSlider } from './modules/sliders/directions.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

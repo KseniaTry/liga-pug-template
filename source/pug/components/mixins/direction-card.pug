@@ -1,6 +1,6 @@
-mixin direction-card(title, items)
+mixin direction-card(title, id ,items)
   .direction-card
-    h2.direction-card__title= title
+    h2.direction-card__title(data-title=id)= title
     ul.direction-card__list
       each item in items
         li.direction-card__item
