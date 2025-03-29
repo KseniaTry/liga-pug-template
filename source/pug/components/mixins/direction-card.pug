@@ -1,5 +1,5 @@
-mixin direction-card(title, id ,items)
-  .direction-card
+mixin direction-card(title, id, items, color)
+  .direction-card(data-color=color)
     h2.direction-card__title(data-title=id)= title
     ul.direction-card__list
       each item in items

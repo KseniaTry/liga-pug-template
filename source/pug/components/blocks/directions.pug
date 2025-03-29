@@ -4,31 +4,37 @@ mixin directions()
       {
         title: "Дизайн",
         id: "design",
+        color: "#82B4FF",
         items: ["Web-дизайн", "Дизайн интерьеров", "3D моделирование", "Motion-дизайн", "Графический дизайн", "3D-анимация", "UX/UI-дизайн", "ArchiCAD", "Геймдизайн", "Adobe After Effects"]
       },
       {
         title: "Программирование",
         id: "programming",
+        color: "#FF89AD",
         items: ["Web-разработка", "DevOps", "JavaScript-разработка", "ReactJS", "Мобильная разработка", "GIT", "Системное администрирование", "Верстка на HTML/CSS", "Unity"]
       },
       {
         title: "Менеджмент",
         id: "management",
+        color: "#FFCCBD",
         items: ["Product-менеджмент", "Личностный рост", "Управление разработкой и IT", "AGILE", "Бренд-менеджмент", "Запуск стартапов", "Финансовая аналитика", "Бухгалтерия", "Управление в SMM", "IT-рекрутмент"]
       },
       {
         title: "Аналитика",
         id: "analytics",
+        color: "#FF9EBB",
         items: ["Data Science", "Продуктовая аналитика", "Системная аналитика", "Бизнес-аналитика", "Аналитика на R", "Работа с Excel и Google таблицами", "Машинное обучение", "Нейронные сети"]
       },
       {
         title: "Маркетинг",
         id: "marketing",
+        color: "#FFB985",
         items: ["Web-аналитика", "SMM-продвижение", "Интернет-маркетинг", "PR-менеджмент", "SEO-продвижение", "Копирайтинг", "Контент-маркетинг", "SERM и репутация", "Маркетинговая аналитика", "Google Ads"]
       },
       {
         title: "Финансы",
         id: "finance",
+        color: "#6CB7F2",
         items: ["Web-аналитика", "SMM-продвижение", "Интернет-маркетинг", "PR-менеджмент", "SEO-продвижение", "Копирайтинг", "Контент-маркетинг", "SERM и репутация", "Маркетинговая аналитика", "Google Ads"]
       },
       ]
@@ -42,4 +48,4 @@ mixin directions()
             .directions__card
               a.directions__link(href="#")
                 span.visually-hidden= `Подробнее о направлении "${direction.title}"`
-                +direction-card(direction.title, direction.id, direction.items)
+                +direction-card(direction.title, direction.id, direction.items, direction.color)
