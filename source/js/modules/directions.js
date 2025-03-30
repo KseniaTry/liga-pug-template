@@ -1,6 +1,6 @@
 // import Swiper, {SwiperOptions} from "swiper"
 // import Swiper from 'swiper'
-import { addSwiperClass, removeSwiperClass, addNavigationButtons } from '../../utils/swiper-class-switcher';
+import { addSwiperClass, removeSwiperClass, addNavigationButtons } from '../utils/swiper-class-switcher';
 // import { Navigation } from 'swiper/modules/navigation/navigation';
 // import 'swiper/swiper.min.css';
 // import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
