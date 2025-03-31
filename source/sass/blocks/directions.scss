@@ -2,7 +2,7 @@
   padding: 3px 0 298px;
 
   @include vp-767 {
-     padding: 3px 0 98px;
+    padding: 3px 0 98px;
   }
 
   &__title {
@@ -47,5 +47,10 @@
     @include vp-767 {
       display: block;
     }
+  }
+
+  &__button--prev,
+  &__button--next {
+    top: 57%;
   }
 }
