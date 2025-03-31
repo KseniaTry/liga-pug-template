@@ -1,155 +1,152 @@
 .promo {
-  padding: 0 0 123px;
+  padding: 0 0 size(123px);
 
-
-  &__card-wrapper {
-    padding: 81px 108px 83px 88px;
-    border-radius: 72px;
+  &__promo-wrapper {
+    // height: size(935px);
+    padding: size(81px) size(108px) size(83px) size(88px);
+    border-radius: size(72px);
     background-color: $color-default-white;
     box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.01);
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
     h2 {
-      margin: 6px 0 20px 56px;
+      margin: size(6px) 0 size(20px) size(56px);
       width: 92%;
-      font-size: 40px;
-      line-height: 115%; // 100% по макету не прошло бы PP
+      font-size: size(40px);
+      line-height: size(46px); // 100% по макету не прошло бы PP, 115 ok
       font-weight: 700;
       color: $color-night-rider-2;
       text-align: center;
     }
   }
 
-  &__text-wrapper {
-    width: 39%;
+  // swiper
+  &__content {
+    display: grid;
+    grid-template-columns: size(424px) size(630px);
+    column-gap: size(28px);
+  }
+
+  // swiper-wrapper
+  &__content-wrapper {}
+
+  &__slide {
+    // swiper-slide
+    width: size(396px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__slide[data-active="not-active"] {
+    display: none;
   }
 
   &__image-wrapper {
-    width: 424px;
-    height: 383px;
-    margin-bottom: 71px;
-    margin-left: -22px;
+    width: size(425px);
+    height: size(425px);
 
     img {
-      width: 424px;
-      height: 383px;
+      width: size(425px);
+      height: size(425px);
       object-fit: cover;
     }
   }
 
   &__description-wrapper {
-    width: 77%;
+    width: size(338px);
 
     h3 {
-      margin-bottom: 21px;
-      font-size: 30px;
-      line-height: 110%; // 100% по макету не прошло бы PP
+      margin-bottom: size(21px);
+      font-size: size(30px);
+      line-height: size(33px); // 100% по макету не прошло бы PP, 110 ok
       font-weight: 800;
       color: $color-accent-main;
     }
 
     p {
-      font-size: 16px;
-      line-height: 160%;
       color: $color-black-russian;
+      font-size: size(16px);
+      line-height: size(25.6px);
     }
   }
 
-  &__advantages-list {
-    width: 58.3%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  &__content-buttons-wrapper {
     align-self: flex-end;
   }
 
-  &__advantages-item {
+  &__content-button {
     position: relative;
-    padding: 28px 110px 24px;
-    margin-bottom: 47px;
-    // width: 630px;
-    border-radius: 30px;
+    padding: size(28px) size(27px) size(24px);
+    margin-bottom: size(47px);
+    border-radius: size(30px);
     background-color: $color-snow;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: size(23px);
 
     &:last-child {
-      margin-bottom: 12px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 26px;
-      left: 4%;
-      display: block;
-      width: 60px;
-      height: 60px;
-      background-color: $color-magnolia;
-      border: 1px solid $color-white-smoke;
-      border-radius: 20px;
-      z-index: 4;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 43px;
-      left: 7.2%;
-      display: block;
-      width: 25px;
-      height: 25px;
-      mask-repeat: no-repeat;
-      mask-position: center;
-      z-index: 5;
-      background-color: $color-accent-main;
+      margin-bottom: size(12px);
     }
   }
 
-  &__advantages-item[data-id="users"]::before {
-    mask-size: 25px 25px;
-    mask-image: url("../../img/svg/users-icon.svg"); // переделать на спрайт
-    // mask-image: url("/img/sprite.svg#users-icon");
-  }
-
-  &__advantages-item[data-id="courses"]::before {
-    mask-size: 20px 20px;
-    mask-image: url("../../img/svg/button-icon.svg"); // переделать на спрайт
-  }
-
-  &__advantages-item[data-id="mentors"]::before {
-    mask-size: 14px 20px;
-    mask-image: url("../../img/svg/mentor-icon.svg"); // переделать на спрайт
-  }
-
-  &__advantages__item.is-open {
+  &__content-button[data-active="is-active"] {
     background-color: $color-accent-main;
     box-shadow: 0 3px 31px 0 rgba(112, 144, 176, 0.02);
   }
 
-  &__advantages__item.is-open .promo__advantages-item-text-wrapper h4 {
-    color: $color-default-white;
+  &__content-button[data-active="is-active"] .promo__text-wrapper {
+    h4 {
+      color: $color-default-white;
+    }
+
+    p {
+      color: $color-perano;
+    }
   }
 
-  &__advantages__item.is-open .promo__advantages-item-text-wrapper p {
-    color: $color-perano;
+  &__icon-wrapper {
+    position: relative;
+    width: size(60px);
+    height: size(60px);
+    background-color: $color-magnolia;
+    border: size(1px) solid $color-white-smoke;
+    border-radius: size(20px);
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $color-accent-main;
+    }
   }
 
-  &__advantages-item-text-wrapper {
+  &__content-button[data-active="is-active"] .promo__icon-wrapper {
+    background-color: $color-royal-blue;
+    border-color: $color-royal-blue;
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+
+  &__text-wrapper {
+    width: 80%;
+
     h4 {
       margin: 0;
-      font-size: 25px;
-      line-height: 160%;
+      font-size: size(25px);
+      line-height: size(25.6px);
       font-weight: 400;
       color: $color-seal-brown;
     }
 
     p {
       margin: 0;
-      font-size: 16px;
-      line-height: 160%;
+      font-size: size(16px);
+      line-height: size(25.6px);
       color: $color-dim-gray;
     }
   }

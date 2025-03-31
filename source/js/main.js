@@ -5,6 +5,7 @@ import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { initMenu } from './modules/menu/menu.js';
 import { initDirectionsSlider } from './modules/directions.js';
+import { initPromoSwitcher } from './modules/promo.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initMenu();
     initDirectionsSlider();
+    initPromoSwitcher();
   });
 });
 
