@@ -49,3 +49,6 @@ mixin directions()
               a.directions__link(href="#")
                 span.visually-hidden= `Подробнее о направлении "${direction.title}"`
                 +direction-card(direction.title, direction.id, direction.items, direction.color)
+        .directions__swiper-navigation.arrows
+          button.directions__button--prev.swiper-button-prev.arrow-button.arrow-button-prev(type='button', aria-label='Кнопка переключения предыдущего слайда')
+          button.directions__button--next.swiper-button-next.arrow-button.arrow-button-next(type='button', aria-label='Кнопка переключения следующего слайда')

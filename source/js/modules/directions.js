@@ -3,7 +3,6 @@
 import { addSwiperClass, removeSwiperClass, addNavigationButtons } from '../utils/swiper-class-switcher';
 // import { Navigation } from 'swiper/modules/navigation/navigation';
 // import 'swiper/swiper.min.css';
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
 
 // инициализация свайпера происходит только при переключении на мобильную версию
 const directionsSlider = document.querySelector('.directions__swiper');
@@ -19,24 +18,23 @@ const DEFAULT_CARD_COLOR = '#ffffff';
 const initDirectionsSwiper = () => {
   directionsSwiper = new Swiper(directionsSlider, {
     slideClass: 'directions__card',
-    modules: [Navigation],
-    slidesPerView: 1,
+    // modules: [Navigation],
+    slidesPerView: 'auto',
     loop: true,
     autoHeight: true,
     allowTouchMove: true,
     navigation: {
-      prevEl: '.reviews__button--prev',
-      nextEl: '.reviews__button--next',
-      clickable: true,
+      prevEl: '.directions__button--prev',
+      nextEl: '.directions__button--next',
     },
-    breakpoints: {
-      1440: {
-        allowTouchMove: false,
-        pagination: {
-          clickable: true,
-        }
-      },
-    }
+    // breakpoints: {
+    //   1440: {
+    //     allowTouchMove: false,
+    //     pagination: {
+    //       clickable: true,
+    //     }
+    //   },
+    // }
   });
 }
 
@@ -55,7 +53,6 @@ const resetCardsColor = () => {
 
 const breakpointChecker = () => {
   if (breakpoint.matches) {
-    console.log(breakpoint);
     changeCardsColor();
     addSwiperClass(directionsSwiperContainer, directionsSwiperWrapper, directionsSlides);
     initDirectionsSwiper();
@@ -71,6 +68,7 @@ const initDirectionsSlider = () => {
   breakpoint.addEventListener('change', breakpointChecker);
 
   if (window.innerWidth < TABLET_MIN_WIDTH) {
+    console.log(window.innerWidth);
     changeCardsColor();
     addSwiperClass(directionsSwiperContainer, directionsSwiperWrapper, directionsSlides);
     initDirectionsSwiper();

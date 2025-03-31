@@ -281,7 +281,7 @@ mixin header(headerMods, currentUrl)
       }
 
   header.header(class=headerMods)(data-name="header")
-    .header__main-wrapper
+    .container.header__main-wrapper
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo

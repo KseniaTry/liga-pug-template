@@ -8,6 +8,13 @@
     background-color: $color-default-white;
     box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.01);
 
+    @include vp-767 {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
     h2 {
       margin: size(6px) 0 size(20px) size(56px);
       width: 92%;
@@ -16,6 +23,13 @@
       font-weight: 700;
       color: $color-night-rider-2;
       text-align: center;
+
+      @include vp-767 {
+        margin-bottom: 25px;
+        font-size: 21px;
+        line-height: 21px;
+        text-align: start;
+      }
     }
   }
 
@@ -36,6 +50,17 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+
+    @include vp-767 {
+      position: relative;
+      height: 439px;
+      padding: 0 20px 39px;
+      width: 280px;
+      border-radius: 34px;
+      border: 1px solid #eeeeee;
+      box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.06);
+      background: #f8f7fc;
+    }
   }
 
   &__slide[data-active="not-active"] {
@@ -46,15 +71,33 @@
     width: size(425px);
     height: size(425px);
 
+    @include vp-767 {
+      position: absolute;
+      top: -90px;
+      left: 0;
+      width: 280px;
+      height: 280px;
+    }
+
     img {
       width: size(425px);
       height: size(425px);
       object-fit: cover;
+
+      @include vp-767 {
+        width: 280px;
+        height: 280px;
+      }
     }
   }
 
   &__description-wrapper {
     width: size(338px);
+
+    @include vp-767 {
+      margin-top: auto;
+      width: 100%;
+    }
 
     h3 {
       margin-bottom: size(21px);
@@ -62,17 +105,32 @@
       line-height: size(33px); // 100% по макету не прошло бы PP, 110 ok
       font-weight: 800;
       color: $color-accent-main;
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 18px;
+      }
     }
 
     p {
       color: $color-black-russian;
       font-size: size(16px);
       line-height: size(25.6px);
+
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 22.4px;
+      }
     }
   }
 
+  // кнопки переключения на десктопе
   &__content-buttons-wrapper {
     align-self: flex-end;
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   &__content-button {

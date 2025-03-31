@@ -6,6 +6,7 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { initMenu } from './modules/menu/menu.js';
 import { initDirectionsSlider } from './modules/directions.js';
 import { initPromoSwitcher } from './modules/promo.js';
+import './vendor.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

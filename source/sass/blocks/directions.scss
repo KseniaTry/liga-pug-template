@@ -1,6 +1,10 @@
 .directions {
   padding: 3px 0 298px;
 
+  @include vp-767 {
+     padding: 3px 0 98px;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 52px;
