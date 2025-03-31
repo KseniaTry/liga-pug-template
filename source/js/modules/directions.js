@@ -18,8 +18,7 @@ const DEFAULT_CARD_COLOR = '#ffffff';
 const initDirectionsSwiper = () => {
   directionsSwiper = new Swiper(directionsSlider, {
     slideClass: 'directions__card',
-    // modules: [Navigation],
-    slidesPerView: 'auto',
+    slidesPerView: 1,
     loop: true,
     autoHeight: true,
     allowTouchMove: true,
@@ -27,14 +26,6 @@ const initDirectionsSwiper = () => {
       prevEl: '.directions__button--prev',
       nextEl: '.directions__button--next',
     },
-    // breakpoints: {
-    //   1440: {
-    //     allowTouchMove: false,
-    //     pagination: {
-    //       clickable: true,
-    //     }
-    //   },
-    // }
   });
 }
 
