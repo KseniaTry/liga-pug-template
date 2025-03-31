@@ -23,10 +23,7 @@
     }
   }
 
-  &__button--next {
+  &__button--next::after {
     transform: rotate(180deg);
   }
-
-  &__button--prev {}
-
 }
