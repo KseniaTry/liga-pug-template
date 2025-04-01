@@ -3,6 +3,7 @@ mixin footer(footerMods)
     const footerLinks = [
       {
         name: "Категории",
+        id: "categories",
         sublevel: true,
         items: [
           {title: "Дизайн", href: "#"},
@@ -14,6 +15,7 @@ mixin footer(footerMods)
       },
       {
         name: "Популярные направления",
+        id: "directions",
         sublevel: true,
         items: [
           {title: "Веб-разработка", href: "#"},
@@ -26,6 +28,7 @@ mixin footer(footerMods)
       },
       {
         name: "Общая информация",
+        id: "info",
         sublevel: true,
         items: [
           {title: "О проекте", href: "#"},
@@ -39,12 +42,8 @@ mixin footer(footerMods)
     .container.footer__main-wrapper
       .footer__site-info-wrapper
         .footer__logo-wrapper
-          .footer__logo-desktop
-            a.logo-desktop-link(href="#")
-              img(src="img/content/logo/logo.svg" width="118" height="38" alt="Логотип FindEdu")
-          .footer__logo-mobile
-            a.logo-mobile-link(href="")
-              img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
+          a.logo-desktop-link(href="#")
+            img(src="img/content/footer-logo/footer-logo.svg" width="125" height="41" alt="Логотип FindEdu")
         p.footer__rights
           |© FindEdu 2022.
           br
@@ -53,7 +52,7 @@ mixin footer(footerMods)
         nav.footer__nav(aria-label="Навигация по категориям сайта")
           ul.footer__nav-list
             each item in footerLinks
-              li.footer__nav-item
+              li.footer__nav-item(data-id=item.id)
                 p.footer__nav-title= item.name
                 if item.sublevel
                   ul.footer__nav-sublist
