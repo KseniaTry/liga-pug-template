@@ -40,23 +40,26 @@ mixin footer(footerMods)
       .footer__site-info-wrapper
         .footer__logo-wrapper
           .footer__logo-desktop
-            img(src="img/content/logo/logo.svg" width="118" height="38" alt="Логотип FindEdu")
+            a.logo-desktop-link(href="#")
+              img(src="img/content/logo/logo.svg" width="118" height="38" alt="Логотип FindEdu")
           .footer__logo-mobile
-            img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
-        p.footer__policy
-        |© FindEdu 2022.
-        |Все права защищены.
+            a.logo-mobile-link(href="")
+              img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
+        p.footer__rights
+          |© FindEdu 2022.
+          br
+          |Все права защищены.
       .footer__nav-wrapper
         nav.footer__nav(aria-label="Навигация по категориям сайта")
-          ul
+          ul.footer__nav-list
             each item in footerLinks
-              li
-                p= item.name
+              li.footer__nav-item
+                p.footer__nav-title= item.name
                 if item.sublevel
-                  ul
+                  ul.footer__nav-sublist
                     for subitem in item.items
-                      li
-                        a(href=subitem.href)= subitem.title
+                      li.footer__nav-sublist-item
+                        a(href=subitem.href).footer__nav-sublist-link= subitem.title
 
 
 

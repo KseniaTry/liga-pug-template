@@ -1,5 +1,99 @@
 .footer {
-  padding: 40px 0;
+  padding: size(70px) 0 size(298px);
+  background-color: $color-nero;
+  color: $color-snow;
 
-  background-color: $color-neon-blue;
+  &__main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: size(98px);
+  }
+
+  // лого + права
+  &__site-info-wrapper {
+    width: size(219px);
+  }
+
+  &__logo-wrapper {
+    margin-bottom: size(47px);
+    width: size(118px);
+    height: size(38px);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__logo-desktop {
+    img {
+      width: size(118px);
+      height: size(38px);
+      object-fit: cover;
+    }
+  }
+
+  &__logo-mobile {
+    display: none;
+  }
+
+  &__rights {
+    color: $color-dim-gray;
+    font-size: size(20px);
+    line-height: size(24px);
+    font-weight: 500;
+  }
+
+  // навигация
+  &__nav-wrapper {}
+
+  &__nav {}
+
+  &__nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: size(95px);
+  }
+
+  &__nav-item {}
+
+  &__nav-title {
+
+    color: $color-snow;
+    font-size: size(20px);
+    line-height: size(24px);
+    font-weight: 500;
+  }
+
+  &__nav-sublist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    margin-top: size(53px);
+  }
+
+  &__nav-sublist-item {
+    margin-bottom: size(24px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-sublist-link {
+    color: $color-dim-gray;
+    font-size: size(16px);
+    line-height: size(24px);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
 }
