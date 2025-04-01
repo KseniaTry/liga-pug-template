@@ -1,6 +1,6 @@
 // import Swiper, {SwiperOptions} from "swiper"
 // import Swiper from 'swiper'
-import { addSwiperClass, removeSwiperClass, addNavigationButtons } from '../utils/swiper-class-switcher';
+import { addSwiperClass, removeSwiperClass } from '../utils/swiper-class-switcher';
 // import { Navigation } from 'swiper/modules/navigation/navigation';
 // import 'swiper/swiper.min.css';
 
@@ -26,6 +26,16 @@ const initDirectionsSwiper = () => {
       prevEl: '.directions__button--prev',
       nextEl: '.directions__button--next',
     },
+    on: {
+      init() {
+        var swiper = this;
+        if (swiper.originalParams.loop && swiper.loopedSlides < swiper.originalParams.slidesPerView) {
+        swiper.params.slidesPerView = swiper.loopedSlides;
+        swiper.destroy(false, false);
+        swiper.init();
+        }
+    }
+      }
   });
 }
 
@@ -47,11 +57,10 @@ const breakpointChecker = () => {
     changeCardsColor();
     addSwiperClass(directionsSwiperContainer, directionsSwiperWrapper, directionsSlides);
     initDirectionsSwiper();
-    // addNavigationButtons('directions', 'swiper');
   } else {
     resetCardsColor();
     removeSwiperClass(directionsSwiperContainer, directionsSwiperWrapper, directionsSlides);
-    // directionsSwiper.destroy();
+    directionsSwiper.destroy();
   }
 };
 
@@ -59,11 +68,9 @@ const initDirectionsSlider = () => {
   breakpoint.addEventListener('change', breakpointChecker);
 
   if (window.innerWidth < TABLET_MIN_WIDTH) {
-    console.log(window.innerWidth);
     changeCardsColor();
     addSwiperClass(directionsSwiperContainer, directionsSwiperWrapper, directionsSlides);
     initDirectionsSwiper();
-    // addNavigationButtons('directions', 'swiper');
   }
 };
 

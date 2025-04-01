@@ -7,6 +7,7 @@ import { initMenu } from './modules/menu/menu.js';
 import { initDirectionsSlider } from './modules/directions.js';
 import { initPromoSwitcher } from './modules/promo.js';
 import './vendor.js';
+import { initPromoSlider } from './modules/promo-slider.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -33,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMenu();
     initDirectionsSlider();
     initPromoSwitcher();
+    initPromoSlider();
   });
 });
 

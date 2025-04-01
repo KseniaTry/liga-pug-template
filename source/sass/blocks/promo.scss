@@ -208,4 +208,18 @@
       color: $color-dim-gray;
     }
   }
+
+  // кнопки свайпера
+  &__swiper-navigation {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__button--prev,
+  &__button--next {
+    top: 57%;
+  }
 }
