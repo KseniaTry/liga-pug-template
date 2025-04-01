@@ -21,13 +21,13 @@ mixin header(headerMods, currentUrl)
   -
     const data =
       {
-        "title": "Title text",
-        "items": [
+        title: "Title text",
+        items: [
           {
-            "title": "Дизайн",
-            "href": "#",
-            "sublevel": true,
-            "items": [
+            title: "Дизайн",
+            href: "#",
+            sublevel: true,
+            items: [
               {
                 "title": "3D анимация",
                 "href": "#"
@@ -59,10 +59,10 @@ mixin header(headerMods, currentUrl)
             ]
           },
           {
-            "title": "Программирование",
-            "href": "#",
-            "sublevel": true,
-            "items": [
+            title: "Программирование",
+            href: "#",
+            sublevel: true,
+            items: [
               {
                 "title": "Web-разработка",
                 "href": "#"
@@ -102,10 +102,10 @@ mixin header(headerMods, currentUrl)
             ]
           },
           {
-            "title": "Аналитика",
-            "href": "#",
-            "sublevel": true,
-            "items": [
+            title: "Аналитика",
+            href: "#",
+            sublevel: true,
+            items: [
               {
                 "title": "Data Science",
                 "href": "#"
@@ -141,10 +141,10 @@ mixin header(headerMods, currentUrl)
             ]
           },
           {
-            "title": "Менеджмент",
-            "href": "#",
-            "sublevel": true,
-            "items": [
+            title: "Менеджмент",
+            href: "#",
+            sublevel: true,
+            items: [
               {
                 "title": "Product-менеджмент",
                 "href": "#"
@@ -192,10 +192,10 @@ mixin header(headerMods, currentUrl)
             ]
           },
           {
-            "title": "Маркетинг",
-            "href": "#",
-            "sublevel": true,
-            "items": [
+            title: "Маркетинг",
+            href: "#",
+            sublevel: true,
+            items: [
               {
                 "title": "Web-аналитика",
                 "href": "#"
@@ -235,10 +235,10 @@ mixin header(headerMods, currentUrl)
             ]
           },
           {
-            "title": "Финансы",
-            "href": "#",
-            "sublevel": true,
-            "items": [
+            title: "Финансы",
+            href: "#",
+            sublevel: true,
+            items: [
               {
                 "title": "Web-аналитика",
                 "href": "#"
@@ -293,7 +293,7 @@ mixin header(headerMods, currentUrl)
           picture
             source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
             img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
-      nav.main-nav
+      nav.main-nav(aria-label="Основное меню сайта")
         button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-name="menu-button")
         .main-nav__wrapper
           ul.main-nav__list

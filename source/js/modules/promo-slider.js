@@ -32,23 +32,23 @@ const initPromoSwiper = () => {
   });
 }
 
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//     addSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);
-//     initPromoSwiper();
-//   } else {
-//     removeSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);
-//     promoSwiper.destroy();
-//   }
-// };
+const breakpointChecker = () => {
+  if (breakpoint.matches) {
+    addSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);
+    initPromoSwiper();
+  } else {
+    removeSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);
+    promoSwiper.destroy();
+  }
+};
 
 const initPromoSlider = () => {
-  // breakpoint.addEventListener('change', breakpointChecker);
+  breakpoint.addEventListener('change', breakpointChecker);
 
-  // if (window.innerWidth < TABLET_MIN_WIDTH) {
-  //   addSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);
+  if (window.innerWidth < TABLET_MIN_WIDTH) {
+    addSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);
     initPromoSwiper();
-  // }
+  }
 };
 
 export { initPromoSlider }

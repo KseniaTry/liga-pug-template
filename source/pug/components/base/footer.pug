@@ -1,3 +1,63 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        name: "Категории",
+        sublevel: true,
+        items: [
+          {title: "Дизайн", href: "#"},
+          {title: "Программирование", href: "#"},
+          {title: "Маркетинг", href: "#"},
+          {title: "Менеджмент", href: "#"},
+          {title: "Аналитика", href: "#"}
+          ]
+      },
+      {
+        name: "Популярные направления",
+        sublevel: true,
+        items: [
+          {title: "Веб-разработка", href: "#"},
+          {title: "Java-разработка", href: "#"},
+          {title: "Phyton-разработка", href: "#"},
+          {title: "SMM-разработка", href: "#"},
+          {title: "Графический дизайн", href: "#"},
+          {title: "Дизайн интерьеров", href: "#"},
+          ]
+      },
+      {
+        name: "Общая информация",
+        sublevel: true,
+        items: [
+          {title: "О проекте", href: "#"},
+          {title: "Политика конфиденциальности", href: "#"},
+          {title: "Пользовательское соглашение", href: "#"},
+          ]
+      },
+    ]
+
   footer.footer(class=footerMods)
-    .container
+    .container.footer__main-wrapper
+      .footer__site-info-wrapper
+        .footer__logo-wrapper
+          .footer__logo-desktop
+            img(src="img/content/logo/logo.svg" width="118" height="38" alt="Логотип FindEdu")
+          .footer__logo-mobile
+            img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
+        p.footer__policy
+        |© FindEdu 2022.
+        |Все права защищены.
+      .footer__nav-wrapper
+        nav.footer__nav(aria-label="Навигация по категориям сайта")
+          ul
+            each item in footerLinks
+              li
+                p= item.name
+                if item.sublevel
+                  ul
+                    for subitem in item.items
+                      li
+                        a(href=subitem.href)= subitem.title
+
+
+
+
