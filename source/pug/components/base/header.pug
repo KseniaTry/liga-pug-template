@@ -19,273 +19,110 @@ mixin header(headerMods, currentUrl)
     ]
 
   -
-    const data =
+    const headerNavLinks = [
       {
-        title: "Title text",
+        title: "Дизайн",
+        href: "#",
+        sublevel: true,
         items: [
-          {
-            title: "Дизайн",
-            href: "#",
-            sublevel: true,
-            items: [
-              {
-                "title": "3D анимация",
-                "href": "#"
-              },
-              {
-                "title": "3D MAX",
-                "href": "#"
-              },
-              {
-                "title": "3D моделирование",
-                "href": "#"
-              },
-              {
-                "title": "Adobe After Effects",
-                "href": "#"
-              },
-              {
-                "title": "Adobe Illustrator",
-                "href": "#"
-              },
-              {
-                "title": "Adobe Photoshop",
-                "href": "#"
-              },
-              {
-                "title": "Отрисовка иллюстраций",
-                "href": "#"
-              }
-            ]
-          },
-          {
-            title: "Программирование",
-            href: "#",
-            sublevel: true,
-            items: [
-              {
-                "title": "Web-разработка",
-                "href": "#"
-              },
-              {
-                "title": "DevOps",
-                "href": "#"
-              },
-              {
-                "title": "JavaScript-разработка",
-                "href": "#"
-              },
-              {
-                "title": "ReactJS",
-                "href": "#"
-              },
-              {
-                "title": "Мобильная разработка",
-                "href": "#"
-              },
-              {
-                "title": "GIT",
-                "href": "#"
-              },
-              {
-                "title": "Системное администрирование",
-                "href": "#"
-              },
-              {
-                "title": "Верстка на HTML/CSS",
-                "href": "#"
-              },
-              {
-                "title": "Unity",
-                "href": "#"
-              }
-            ]
-          },
-          {
-            title: "Аналитика",
-            href: "#",
-            sublevel: true,
-            items: [
-              {
-                "title": "Data Science",
-                "href": "#"
-              },
-              {
-                "title": "Продуктовая аналитика",
-                "href": "#"
-              },
-              {
-                "title": "Системная аналитика",
-                "href": "#"
-              },
-              {
-                "title": "Бизнес-аналитика",
-                "href": "#"
-              },
-              {
-                "title": "Аналитика",
-                "href": "#"
-              },
-              {
-                "title": "Работа с Excel и Google таблицами",
-                "href": "#"
-              },
-              {
-                "title": "Машинное обучение",
-                "href": "#"
-              },
-              {
-                "title": "Нейронные сети",
-                "href": "#"
-              }
-            ]
-          },
-          {
-            title: "Менеджмент",
-            href: "#",
-            sublevel: true,
-            items: [
-              {
-                "title": "Product-менеджмент",
-                "href": "#"
-              },
-              {
-                "title": "DevOps",
-                "href": "#"
-              },
-              {
-                "title": "Личностный рост",
-                "href": "#"
-              },
-              {
-                "title": "Управление разработкой и IT",
-                "href": "#"
-              },
-              {
-                "title": "AGile",
-                "href": "#"
-              },
-              {
-                "title": "Бренд-менеджмент",
-                "href": "#"
-              },
-              {
-                "title": "Запуск стартапов",
-                "href": "#"
-              },
-              {
-                "title": "Финансовая аналитика",
-                "href": "#"
-              },
-              {
-                "title": "Бухгалтерия",
-                "href": "#"
-              },
-              {
-                "title": "Управление в SMM",
-                "href": "#"
-              },
-              {
-                "title": "IT-рекрутмент",
-                "href": "#"
-              }
-            ]
-          },
-          {
-            title: "Маркетинг",
-            href: "#",
-            sublevel: true,
-            items: [
-              {
-                "title": "Web-аналитика",
-                "href": "#"
-              },
-              {
-                "title": "SMM-продвижение",
-                "href": "#"
-              },
-              {
-                "title": "Интернет-маркетинг",
-                "href": "#"
-              },
-              {
-                "title": "PR-менеджмент",
-                "href": "#"
-              },
-              {
-                "title": "SEO-продвижение",
-                "href": "#"
-              },
-              {
-                "title": "Копирайтинг",
-                "href": "#"
-              },
-              {
-                "title": "Контент-маркетинг",
-                "href": "#"
-              },
-              {
-                "title": "SERM и репутация",
-                "href": "#"
-              },
-              {
-                "title": "Маркетинговая аналитика",
-                "href": "#"
-              }
-            ]
-          },
-          {
-            title: "Финансы",
-            href: "#",
-            sublevel: true,
-            items: [
-              {
-                "title": "Web-аналитика",
-                "href": "#"
-              },
-              {
-                "title": "SMM-продвижение",
-                "href": "#"
-              },
-              {
-                "title": "Интернет-маркетинг",
-                "href": "#"
-              },
-              {
-                "title": "PR-менеджмент",
-                "href": "#"
-              },
-              {
-                "title": "SEO-продвижение",
-                "href": "#"
-              },
-              {
-                "title": "Копирайтинг",
-                "href": "#"
-              },
-              {
-                "title": "Контент-маркетинг",
-                "href": "#"
-              },
-              {
-                "title": "SERM и репутация",
-                "href": "#"
-              },
-              {
-                "title": "Маркетинговая аналитика",
-                "href": "#"
-              }
-            ]
-          }
-        ]
+          {title: "3D анимация", href: "#"},
+          {title: "3D MAX", href: "#"},
+          {title: "3D моделирование", href: "#"},
+          {title: "Adobe After Effects", href: "#"},
+          {title: "Adobe Illustrator", href: "#"},
+          {title: "Adobe Photoshop", href: "#"},
+          {title: "Отрисовка иллюстраций", href: "#"}
+          ]
+      },
+      {
+        title: "Программирование",
+        href: "#",
+        sublevel: true,
+        items: [
+          {title: "Web-разработка", href: "#"},
+          {title: "DevOps", href: "#"},
+          {title: "JavaScript-разработка", href: "#"},
+          {title: "ReactJS", href: "#"},
+          {title: "Мобильная разработка", href: "#"},
+          {title: "GIT", href: "#"},
+          {title: "Системное администрирование", href: "#"},
+          {title: "Верстка на HTML/CSS", href: "#"},
+          {title: "Unity", href: "#"},
+          ]
+      },
+      {
+        title: "Аналитика",
+        href: "#",
+        sublevel: true,
+        items: [
+          {title: "Data Science", href: "#"},
+          {title: "Продуктовая аналитика", href: "#"},
+          {title: "Системная аналитика", href: "#"},
+          {title: "Бизнес-аналитика", href: "#"},
+          {title: "Аналитика", href: "#"},
+          {title: "Работа с Excel и Google таблицами", href: "#"},
+          {title: "Машинное обучение", href: "#"},
+          {title: "Нейронные сети", href: "#"}
+          ]
+      },
+      {
+        title: "Менеджмент",
+        href: "#",
+        sublevel: true,
+        items: [
+          {title: "Product-менеджмент", href: "#"},
+          {title: "DevOps", href: "#"},
+          {title: "Личностный рост", href: "#"},
+          {title: "Управление разработкой и IT", href: "#"},
+          {title: "AGile", href: "#"},
+          {title: "Бренд-менеджмент", href: "#"},
+          {title: "Запуск стартапов", href: "#"},
+          {title: "Финансовая аналитика", href: "#"},
+          {title: "Бухгалтерия", href: "#"},
+          {title: "Управление в SMM", href: "#"},
+          {title: "IT-рекрутмент", href: "#"}
+          ]
+      },
+      {
+        title: "Маркетинг",
+        href: "#",
+        sublevel: true,
+        items: [
+          {title: "Web-аналитика", href: "#"},
+          {title: "SMM-продвижение", href: "#"},
+          {title: "Интернет-маркетинг", href: "#"},
+          {title: "PR-менеджмент", href: "#"},
+          {title: "SEO-продвижение", href: "#"},
+          {title: "Копирайтинг", href: "#"},
+          {title: "Контент-маркетинг", href: "#"},
+          {title: "SERM и репутация", href: "#"},
+          {title: "Маркетинговая аналитика", href: "#"}
+          ]
+      },
+      {
+        title: "Финансы",
+        href: "#",
+        sublevel: true,
+        items: [
+          {title: "Web-аналитика", href: "#"},
+          {title: "SMM-продвижение", href: "#"},
+          {title: "Интернет-маркетинг", href: "#"},
+          {title: "PR-менеджмент", href: "#"},
+          {title: "SEO-продвижение", href: "#"},
+          {title: "Копирайтинг", href: "#"},
+          {title: "Контент-маркетинг", href: "#"},
+          {title: "SERM и репутация", href: "#"},
+          {title: "Маркетинговая аналитика", href: "#"}
+          ]
       }
+    ]
 
   header.header(class=headerMods)(data-name="header")
     .container.header__main-wrapper
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
         span.header__logo
-           picture
+          picture
             source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
             img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
       else
@@ -306,7 +143,7 @@ mixin header(headerMods, currentUrl)
                   a.main-nav__link(href=link.href)= link.text
       .header__menu(data-name="menu")
         ul.header__menu-list(data-name="menu-list")
-          each item in data.items
+          each item in headerNavLinks
             li.header__menu-item(data-name="menu-item")
               a.header__menu-link(href=item.href)= item.title
               if item.sublevel
