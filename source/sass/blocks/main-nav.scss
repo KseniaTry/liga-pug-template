@@ -1,15 +1,14 @@
 .main-nav {
   width: size(860px);
 
-    @include vp-1023 {
+  @include vp-1023 {
     width: 56%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__wrapper {
-  }
+  &__wrapper {}
 
   &__list {
     margin: 0;
@@ -30,7 +29,7 @@
   &__item {
     margin-right: 20px;
 
-      @include vp-1023 {
+    @include vp-1023 {
       display: none;
     }
 
@@ -43,7 +42,7 @@
     color: $color-default-black;
     font-weight: 500;
 
-      @include vp-1023 {
+    @include vp-1023 {
       font-family: $ff-gilroy;
       font-size: 14px;
       line-height: 100%;
