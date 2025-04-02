@@ -22,6 +22,11 @@
     color: $color-night-rider;
     word-wrap: break-word;
 
+    @include vp-1023 {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+
     @include vp-767 {
       margin-bottom: 53px;
       padding-left: 54px;
@@ -127,7 +132,7 @@
     margin: 0;
     font-size: size(17px);
     line-height: 160%;
-    color: #6b6b6b;
+    color: $color-dim-gray;
 
     @include vp-767 {
       color: $color-default-white;

@@ -1,5 +1,5 @@
 .directions {
-  padding: 3px 0 298px;
+  padding: size(3px) 0 size(298px);
 
   @include vp-767 {
     padding: 3px 0 98px;
@@ -7,10 +7,9 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 52px;
+    margin-bottom: size(52px);
 
-    font-family: $ff-gilroy;
-    font-size: 40px;
+    font-size: size(40px);
     line-height: 100%;
     font-weight: 700;
     color: $color-night-rider-2;
@@ -29,12 +28,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    column-gap: 20px;
-    row-gap: 47px;
+    column-gap: size(18px);
+    row-gap: size(47px);
   }
 
   &__card {
-    width: 30%;
+    width: size(414px);
+
+    @include vp-1023 {
+      width: 30%;
+    }
 
     @include vp-767 {
       width: 100%;
