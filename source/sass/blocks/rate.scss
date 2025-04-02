@@ -5,23 +5,24 @@
   align-items: center;
   gap: size(3px);
 
-  &__star {}
-
-  &__star--active::before {
-    content: "";
+  &__star {
     display: block;
     width: size(14px);
     height: size(14px);
-    background-color: #fecd1e;
-    mask-image: url(../../img/svg/star.svg);
-    mask-size: size(14px) size(14px);
-    mask-repeat: no-repeat;
-    mask-position: center;
 
     @include vp-1023 {
       width: 10px;
       height: 10px;
-      mask-size: 10px 10px;
+    }
+
+    svg {
+      width: size(14px);
+      height: size(14px);
+
+      @include vp-1023 {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 }
