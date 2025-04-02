@@ -2,30 +2,30 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
+  gap: size(15px);
 
-  padding: 28px 28px 15px 16px;
-  width: 488px;
+  padding: size(28px) size(28px) size(15px) size(16px);
+  width: size(488px);
 
   background-color: $color-magnolia;
   box-shadow: 0 3px 37px 0 rgba(0, 0, 0, 0.06);
-  border: 0.74px solid $color-gainsboro;
-  border-radius: 18.66px;
+  border: size(0.74px) solid $color-gainsboro;
+  border-radius: size(18.66px);
 
   &__title-wrapper {
-    width: 276px;
+    width: size(276px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-end;
-    column-gap: 13px;
-    row-gap: 5px;
+    column-gap: size(13px);
+    row-gap: size(5px);
 
     h2 {
       margin: 0;
-      width: 149px;
+      width: size(149px);
 
       font-family: $ff-gilroy;
-      font-size: 20px;
+      font-size: size(20px);
       line-height: 100%;
       font-weight: 600;
       color: $color-black;
@@ -36,7 +36,7 @@
       margin: 0;
       color: $color-dim-gray;
       font-family: $ff-gilroy;
-      font-size: 15px;
+      font-size: size(15px);
       line-height: 150%;
     }
   }
@@ -47,14 +47,14 @@
   }
 
   &__stats-wrapper {
-    margin-top: 5px;
+    margin-top: size(5px);
 
     p {
       margin: 0;
-      margin-bottom: 4px;
+      margin-bottom: size(4px);
 
       font-family: $ff-gilroy;
-      font-size: 15px;
+      font-size: size(15px);
       line-height: 100%;
       font-weight: 600;
       text-align: end;
@@ -74,20 +74,25 @@
   &__popularity-item {
     display: flex;
     align-items: center;
-    column-gap: 18px;
-    margin-bottom: 8px;
+    column-gap: size(18px);
+    margin-bottom: size(8px);
   }
 
   &__logo-wrapper {
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
+    width: size(24px);
+    height: size(24px);
+
+    img {
+      width: size(24px);
+      height: size(24px);
+      object-fit: cover;
+    }
   }
 
   &__platform-rate {
     position: relative;
-    height: 18px;
-    border-radius: 5px;
+    height: size(18px);
+    border-radius: size(5px);
 
     &::before {
       content: "";
@@ -95,16 +100,16 @@
       top: 0;
       left: 0;
       display: block;
-      height: 18px;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      height: size(18px);
+      border-top-left-radius: size(5px);
+      border-bottom-left-radius: size(5px);
     }
   }
 
   &__platform-rate[data-platform="skillbox"] {
-    width: 186px;
+    width: size(186px);
     background-color: #DFE1FF;
-    // background-image: linear-gradient(to right, #323BE1 60%, #DFE1FF 60%);
+
 
     &::before {
       width: 57%;
@@ -113,7 +118,7 @@
   }
 
   &__platform-rate[data-platform="skillfactory"] {
-    width: 273px;
+    width: size(273px);
     background-color: rgba(130, 217, 124, 0.3);
     // background-image: linear-gradient(to right, #5CAF56 60%, rgba(130, 217, 124, 0.3) 60%);
 
@@ -124,7 +129,7 @@
   }
 
   &__platform-rate[data-platform="geekbrains"] {
-    width: 347px;
+    width: size(347px);
     background-color: #e7e7e7;
     // background-image: linear-gradient(to right, #222222 60%, #e7e7e7 60%);
 
@@ -135,7 +140,7 @@
   }
 
   &__platform-rate[data-platform="netology"] {
-    width: 276px;
+    width: size(276px);
     background-color: #ffcfe0;
     // background-image: linear-gradient(to right, #eb236b 60%, #ffcfe0 60%);
 
@@ -146,7 +151,7 @@
   }
 
   &__platform-rate[data-platform="skypro"] {
-    width: 302px;
+    width: size(302px);
     background-color: #cdedff;
     // background-image: linear-gradient(to right, #54bff9 60%, #cdedff 60%);
 
