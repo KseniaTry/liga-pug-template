@@ -5,7 +5,7 @@
     padding: 3px 0 98px;
   }
 
-  &__title {
+  h2 {
     margin: 0;
     margin-bottom: size(52px);
 
@@ -13,6 +13,10 @@
     line-height: 100%;
     font-weight: 700;
     color: $color-night-rider-2;
+
+    @include vp-1023 {
+      font-size: 20px;
+    }
 
     @include vp-767 {
       margin-bottom: 30px;

@@ -1,21 +1,28 @@
 .direction-card {
   height: size(425px);
-  padding: size(77px) size(20px) size(95px);
+  padding: size(55px) size(20px) size(95px);
   background-color: $color-default-white;
   border-radius: size(56px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: size(26px);
+  row-gap: size(75px);
+
+  @include vp-1023 {
+    row-gap: 20px;
+  }
 
   @include vp-767 {
     height: 280px;
-    padding: 47px 0 52px 22px;
+    padding: 37px 0 52px 22px;
+    column-gap: 16px;
+    row-gap: 44px;
     border-radius: 35px;
   }
 
-  &__title {
-    position: relative;
+  h3 {
     margin: 0;
-    margin-bottom: size(88px);
-    padding-left: size(95px);
-
     font-size: size(25px);
     line-height: 100%;
     font-weight: 500;
@@ -24,60 +31,32 @@
 
     @include vp-1023 {
       font-size: 12px;
-      margin-bottom: 30px;
     }
 
     @include vp-767 {
-      margin-bottom: 53px;
-      padding-left: 54px;
-
       font-size: 18px;
       color: $color-default-white;
     }
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: size(-15px);
-      left: size(20px);
-      display: block;
+  &__icon-wrapper {
+    width: size(55px);
+    height: size(55px);
+
+    @include vp-767 {
+      width: 37px;
+      height: 37px;
+    }
+
+    svg {
       width: size(55px);
       height: size(55px);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
 
       @include vp-767 {
-        width: 45px;
-        height: 44px;
-        top: -10px;
-        left: 0;
+        width: 37px;
+        height: 37px;
       }
     }
-  }
-
-  &__title[data-title="design"]::before {
-    background-image: url("../../img/svg/design-icon.svg");
-  }
-
-  &__title[data-title="programming"]::before {
-    background-image: url("../../img/svg/programming-icon.svg");
-  }
-
-  &__title[data-title="management"]::before {
-    background-image: url("../../img/svg/management-icon.svg");
-  }
-
-  &__title[data-title="analytics"]::before {
-    background-image: url("../../img/svg/analytics-icon.svg");
-  }
-
-  &__title[data-title="marketing"]::before {
-    background-image: url("../../img/svg/marketing-icon.svg");
-  }
-
-  &__title[data-title="finance"]::before {
-    background-image: url("../../img/svg/finance-icon.svg");
   }
 
   &__list {
@@ -126,17 +105,21 @@
         mask-size: 10px 10px;
       }
     }
-  }
 
-  &__text {
-    margin: 0;
-    font-size: size(17px);
-    line-height: 160%;
-    color: $color-dim-gray;
+    p {
+      margin: 0;
+      font-size: size(17px);
+      line-height: 160%;
+      color: $color-dim-gray;
 
-    @include vp-767 {
-      color: $color-default-white;
-      font-size: 14px;
+      @include vp-1023 {
+       font-size: 8px;
+      }
+
+      @include vp-767 {
+        color: $color-default-white;
+        font-size: 14px;
+      }
     }
   }
 }

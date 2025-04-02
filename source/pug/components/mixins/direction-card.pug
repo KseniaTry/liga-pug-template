@@ -1,7 +1,9 @@
 mixin direction-card(title, id, items, color)
   .direction-card(data-color=color)
-    h2.direction-card__title(data-title=id)= title
+    .direction-card__icon-wrapper
+      +icon(id, 55, 55)
+    h3(data-title=id)= title
     ul.direction-card__list
       each item in items
         li.direction-card__item
-          p.direction-card__text= item
+          p= item
