@@ -37,7 +37,7 @@
   }
 
   &__card {
-    width: size(414px);
+    width: size(400px);
 
     @include vp-1023 {
       width: 30%;

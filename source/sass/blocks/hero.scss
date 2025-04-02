@@ -15,7 +15,11 @@
 
   &__text-wrapper {
     margin-top: size(139px);
-    width: size(730px);
+    width: size(690px);
+
+    @include vp-1023 {
+      width: 47%;
+    }
 
     @include vp-767 {
       margin-top: 0;

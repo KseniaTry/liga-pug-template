@@ -122,4 +122,18 @@
       }
     }
   }
+
+  // состояние карточки
+  &:hover {
+    background-color: $color-maya-blue;
+
+    h3,
+    p {
+      color: $color-default-white;
+    }
+
+    .direction-card__item:nth-child(odd)::after {
+      background-color: $color-default-white;
+    }
+  }
 }
