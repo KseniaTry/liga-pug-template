@@ -1,16 +1,16 @@
 .btn {
   position: relative;
   display: inline-flex;
-  padding: 30px 116px 30px 60px;
+  padding: size(30px) size(116px) size(30px) size(60px);
 
-  font-size: 16px;
+  font-size: size(16px);
   line-height: 100%;
   font-weight: 500;
   color: $color-snow;
 
   background-color: $color-accent-main;
-  border: 1px solid transparent;
-  border-radius: 20px;
+  border: size(1px) solid transparent;
+  border-radius: size(20px);
   cursor: pointer;
 
   transition: opacity $trans-default;
@@ -24,12 +24,12 @@
   &::after {
     content: "";
     position: absolute;
-    top: 16px;
-    right: 46px;
-    width: 45px;
-    height: 45px;
+    top: size(16px);
+    right: size(46px);
+    width: size(45px);
+    height: size(45px);
     display: block;
-    background-color: #678CF8;
+    background-color: $color-cornflower-blue;
     border-radius: 50%;
 
     @include vp-767 {
@@ -44,13 +44,13 @@
     content: "";
     position: absolute;
     display: block;
-    top: 30px;
-    right: 58px;
-    width: 18px;
-    height: 18px;
+    top: size(30px);
+    right: size(58px);
+    width: size(18px);
+    height: size(18px);
     background-color: $color-snow;
     mask-image: url(../../img/svg/button-icon.svg);
-    mask-size: 18px 18px;
+    mask-size: size(18px) size(18px);
     mask-repeat: no-repeat;
     mask-position: center;
     z-index: 2;
@@ -58,6 +58,7 @@
     @include vp-767 {
       width: 12px;
       height: 12px;
+      mask-size: 18px 18px;
       top: 16px;
       right: 24px;
     }
