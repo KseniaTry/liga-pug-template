@@ -206,6 +206,10 @@
     font-weight: 400;
     color: $color-default-black;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     @include vp-1023 {
       font-size: 10px;
       line-height: 146%;
