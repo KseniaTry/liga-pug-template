@@ -12,6 +12,12 @@
   border: size(0.74px) solid $color-gainsboro;
   border-radius: size(18.66px);
 
+  @include vp-1023 {
+    width: 320px;
+    padding: 14px 10px;
+    gap: 15px;
+  }
+
   &__title-wrapper {
     width: size(276px);
     display: grid;
@@ -20,44 +26,67 @@
     column-gap: size(13px);
     row-gap: size(5px);
 
+    @include vp-1023 {
+      width: 50%;
+    }
+
     h2 {
       margin: 0;
       width: size(149px);
 
-      font-family: $ff-gilroy;
       font-size: size(20px);
       line-height: 100%;
       font-weight: 600;
       color: $color-black;
+
+      @include vp-1023 {
+        width: 122px;
+        font-size: 16px;
+      }
     }
 
     p {
       grid-column: 1 / 3;
       margin: 0;
       color: $color-dim-gray;
-      font-family: $ff-gilroy;
       font-size: size(15px);
       line-height: 150%;
+
+      @include vp-1023 {
+        font-size: 8px;
+      }
     }
   }
 
   &__rate {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+
+    @include vp-1023 {
+     align-self: center;
+    }
   }
 
   &__stats-wrapper {
     margin-top: size(5px);
 
+    @include vp-1023 {
+      width: 40%;
+    }
+
     p {
       margin: 0;
       margin-bottom: size(4px);
 
-      font-family: $ff-gilroy;
       font-size: size(15px);
       line-height: 100%;
       font-weight: 600;
       text-align: end;
+
+      @include vp-1023 {
+        font-size: 12px;
+
+      }
     }
   }
 
@@ -76,16 +105,30 @@
     align-items: center;
     column-gap: size(18px);
     margin-bottom: size(8px);
+
+    @include vp-1023 {
+      margin-bottom: 5px;
+    }
   }
 
   &__logo-wrapper {
     width: size(24px);
     height: size(24px);
 
+    @include vp-1023 {
+      width: 18px;
+      height: 18px;
+    }
+
     img {
       width: size(24px);
       height: size(24px);
       object-fit: cover;
+
+      @include vp-1023 {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 
@@ -93,6 +136,10 @@
     position: relative;
     height: size(18px);
     border-radius: size(5px);
+
+    @include vp-1023 {
+      height: 12px;
+    }
 
     &::before {
       content: "";
@@ -103,6 +150,10 @@
       height: size(18px);
       border-top-left-radius: size(5px);
       border-bottom-left-radius: size(5px);
+
+    @include vp-1023 {
+      height: 12px;
+    }
     }
   }
 
@@ -110,6 +161,9 @@
     width: size(186px);
     background-color: #DFE1FF;
 
+    @include vp-1023 {
+      width: 150px;
+    }
 
     &::before {
       width: 57%;
@@ -122,6 +176,10 @@
     background-color: rgba(130, 217, 124, 0.3);
     // background-image: linear-gradient(to right, #5CAF56 60%, rgba(130, 217, 124, 0.3) 60%);
 
+    @include vp-1023 {
+      width: 195px;
+    }
+
     &::before {
       width: 70%;
       background-color: #5CAF56;
@@ -132,6 +190,10 @@
     width: size(347px);
     background-color: #e7e7e7;
     // background-image: linear-gradient(to right, #222222 60%, #e7e7e7 60%);
+
+    @include vp-1023 {
+      width: 250px;
+    }
 
     &::before {
       width: 42%;
@@ -144,6 +206,10 @@
     background-color: #ffcfe0;
     // background-image: linear-gradient(to right, #eb236b 60%, #ffcfe0 60%);
 
+    @include vp-1023 {
+      width: 200px;
+    }
+
     &::before {
       width: 76%;
       background-color: #eb236b;
@@ -154,6 +220,10 @@
     width: size(302px);
     background-color: #cdedff;
     // background-image: linear-gradient(to right, #54bff9 60%, #cdedff 60%);
+
+    @include vp-1023 {
+      width: 220px;
+    }
 
     &::before {
       width: 45%;

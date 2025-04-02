@@ -43,10 +43,13 @@
     font-weight: 500;
 
     @include vp-1023 {
-      font-family: $ff-gilroy;
-      font-size: 14px;
+      font-size: 19px;
       line-height: 100%;
       font-weight: 600;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
     }
 
     &.is-active {

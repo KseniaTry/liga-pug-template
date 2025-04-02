@@ -17,5 +17,11 @@
     mask-size: size(14px) size(14px);
     mask-repeat: no-repeat;
     mask-position: center;
+
+    @include vp-1023 {
+      width: 10px;
+      height: 10px;
+      mask-size: 10px 10px;
+    }
   }
 }
