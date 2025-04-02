@@ -1,7 +1,6 @@
 .main-nav {
-  width: 40.4%;
+  width: size(860px);
 
-  // @include vp-767 {
     @include vp-1023 {
     width: 56%;
     display: flex;
@@ -16,17 +15,21 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    width: size(860px);
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 13%;
+    justify-content: flex-start;
+    gap: size(172px);
+
+    @include vp-1023 {
+      width: 100%;
+    }
   }
 
   &__item {
     margin-right: 20px;
 
-    // @include vp-767 {
       @include vp-1023 {
       display: none;
     }
@@ -40,7 +43,6 @@
     color: $color-default-black;
     font-weight: 500;
 
-    // @include vp-767 {
       @include vp-1023 {
       font-family: $ff-gilroy;
       font-size: 14px;
@@ -58,7 +60,6 @@
     display: none;
 
     @include vp-1023 {
-    // @include vp-767 {
       display: block;
       width: 22px;
       height: 12px;

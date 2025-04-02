@@ -1,5 +1,5 @@
 .header {
-  padding: 42px 0 49px;
+  padding: size(42px) 0 size(49px);
   background-color: $color-default-white;
 
   @include vp-1023 {
@@ -16,13 +16,21 @@
   }
 
   &__main-wrapper {
-    margin: 0 auto;
+    width: 100%;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    gap: size(37px);
+  }
+
+  &__header-wrapper {
+    width: 100%;
+    padding: 0 size(321px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 22%;
-    row-gap: size(37px);
+    column-gap: size(91px);
 
     @include vp-1023 {
       justify-content: space-between;
@@ -39,7 +47,10 @@
 
   &__menu {
     position: relative;
-    width: 98.4%;
+    width: 100%;
+    padding: 0 size(321px);
+    padding-top: size(50px);
+    border-top: size(0.7px) solid $color-whisper;
 
     @include vp-1023 {
       display: none;
@@ -67,14 +78,11 @@
   &__menu-list {
     margin: 0;
     padding: 0;
-    padding-top: 50px;
     list-style-type: none;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    border-top: size(0.7px) solid $color-whisper;
 
     @include vp-1023 {
       flex-direction: column;
@@ -86,7 +94,7 @@
 
   &__menu-item {
     position: relative;
-    padding-right: 35px;
+    padding-right: size(35px);
     // transition: all 0.3s;
 
     @include vp-1023 {
@@ -102,12 +110,12 @@
       content: "";
       display: block;
       position: absolute;
-      top: 9px;
+      top: size(9px);
       right: 0;
-      width: 10px;
-      height: 10px;
+      width: size(10px);
+      height: size(10px);
       mask-image: url("./../../img/svg/triangle-down.svg");
-      mask-size: 10px 10px;
+      mask-size: size(10px) size(10px);
       background-color: $color-silver;
 
       @include vp-1023 {
@@ -144,7 +152,6 @@
     line-height: 100%;
 
     @include vp-1023 {
-      // font-family: GILROY;
       font-size: 14px;
     }
   }
@@ -157,16 +164,23 @@
   &__menu-item:hover .header__menu-content-list {
     display: block;
     position: absolute;
+    left: size(-15px);
     z-index: 10;
 
     margin: 0;
     padding: 0;
     list-style-type: none;
 
-    padding: 15px 0 22px;
-    background-color: inherit;
+    width: size(210px);
+    padding: size(15px) size(20px) size(22px);
+    background-color: $color-default-white;
+    border-bottom-left-radius: size(30px);
+    border-bottom-right-radius: size(30px);
 
     @include vp-1023 {
+      width: 100%;
+      padding: 15px 0 22px;
+      background-color: transparent;
       position: static;
       padding-bottom: 0;
     }

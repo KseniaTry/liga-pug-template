@@ -119,28 +119,29 @@ mixin header(headerMods, currentUrl)
 
   header.header(class=headerMods)(data-name="header")
     .container.header__main-wrapper
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo
-          picture
-            source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
-            img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
-          picture
-            source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
-            img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
-      nav.main-nav(aria-label="Основное меню сайта")
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-name="menu-button")
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+      .header__header-wrapper
+        if(currentUrl === "index.html")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          span.header__logo
+            picture
+              source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
+              img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
+        else
+          a.header__logo(href="index.html", aria-label="Переход на главную")
+            picture
+              source(media="(min-width: 1024px)" width="118" height="38" type="image/svg+xml", srcset="img/content/logo/logo.svg")
+              img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
+        nav.main-nav(aria-label="Основное меню сайта")
+          button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-name="menu-button")
+          .main-nav__wrapper
+            ul.main-nav__list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.main-nav__item
+                  if(activeState)
+                    span.main-nav__link.is-active= link.text
+                  else
+                    a.main-nav__link(href=link.href)= link.text
       .header__menu(data-name="menu")
         ul.header__menu-list(data-name="menu-list")
           each item in headerNavLinks
