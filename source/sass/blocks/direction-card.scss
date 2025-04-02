@@ -1,8 +1,8 @@
 .direction-card {
-  height: 425px;
-  padding: 77px 20px 95px;
+  height: size(425px);
+  padding: size(77px) size(20px) size(95px);
   background-color: $color-default-white;
-  border-radius: 56px;
+  border-radius: size(56px);
 
   @include vp-767 {
     height: 280px;
@@ -13,10 +13,10 @@
   &__title {
     position: relative;
     margin: 0;
-    margin-bottom: 88px;
-    padding-left: 95px;
+    margin-bottom: size(88px);
+    padding-left: size(95px);
 
-    font-size: 25px;
+    font-size: size(25px);
     line-height: 100%;
     font-weight: 500;
     color: $color-night-rider;
@@ -33,11 +33,11 @@
     &::before {
       content: "";
       position: absolute;
-      top: -15px;
-      left: 20px;
+      top: size(-15px);
+      left: size(20px);
       display: block;
-      width: 55px;
-      height: 55px;
+      width: size(55px);
+      height: size(55px);
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
@@ -81,11 +81,11 @@
     list-style-type: none;
 
     mask-image: linear-gradient(180deg, rgb(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
-    height: 146px;
+    height: size(146px);
 
     display: flex;
     flex-wrap: wrap;
-    row-gap: 3px;
+    row-gap: size(3px);
     column-gap: 12%;
 
     @include vp-767 {
@@ -101,14 +101,14 @@
       content: "";
       display: block;
       position: absolute;
-      top: 6px;
-      right: -30px;
-      width: 15.56px;
-      height: 15.56px;
+      top: size(6px);
+      right: size(-30px);
+      width: size(15.56px);
+      height: size(15.56px);
 
       mask-image: url("../../img/svg/star-divider.svg");
       background-color: #6b6b6b;
-      mask-size: 16px 16px;
+      mask-size: size(16px) size(16px);
       mask-repeat: no-repeat;
       mask-position: center;
 
@@ -125,7 +125,7 @@
 
   &__text {
     margin: 0;
-    font-size: 17px;
+    font-size: size(17px);
     line-height: 160%;
     color: #6b6b6b;
 
