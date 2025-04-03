@@ -4,10 +4,11 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import { initMenu } from './modules/menu/menu.js';
-import { initDirectionsSlider } from './modules/directions.js';
-import { initPromoSwitcher } from './modules/promo.js';
+import { initDirectionsSlider } from './modules/directions/directions-slider.js';
+import { initPromoSwitcher } from './modules/promo/promo-switcher.js';
 import './vendor.js';
-import { initPromoSlider } from './modules/promo-slider.js';
+import { initPromoSlider } from './modules/promo/promo-slider.js';
+import { addCardsHover } from './modules/directions/directions-color-change.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -35,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initDirectionsSlider();
     initPromoSwitcher();
     initPromoSlider();
+    addCardsHover();
   });
 });
 

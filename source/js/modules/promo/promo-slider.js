@@ -1,4 +1,4 @@
-import { addSwiperClass, removeSwiperClass } from "../utils/swiper-class-switcher";
+import { addSwiperClass, removeSwiperClass } from "../../utils/swiper-class-switcher";
 
 const promoSlider = document.querySelector('.promo__content');
 const breakpoint = window.matchMedia('(max-width: 767px)');
