@@ -1,4 +1,4 @@
-const promoButtons = document.querySelectorAll('.promo__content-button');
+const promoButtons = document.querySelectorAll('[data-class="content-button"]');
 const contentWrapper = document.querySelector('[data-id="content-wrapper"]');
 
 const resetDataset = () => {

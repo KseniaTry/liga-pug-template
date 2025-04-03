@@ -54,7 +54,7 @@ mixin promo()
                   p= item.description
           .promo__content-buttons-wrapper
               for item in promoItems
-                .promo__content-button(data-id=item.id, data-active= item.isActive ? "is-active" : "not-active")
+                .promo__content-button(data-class="content-button", data-id=item.id, data-active= item.isActive ? "is-active" : "not-active")
                   .promo__icon-wrapper
                     +icon(item.id, 25, 25)
                   .promo__text-wrapper

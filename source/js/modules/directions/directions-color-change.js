@@ -1,4 +1,4 @@
-const directionsCards = document.querySelectorAll('.direction-card');
+const directionsCards = document.querySelectorAll('[data-class="direction-card"]');
 const DEFAULT_CARD_COLOR = '#ffffff';
 
 // изменение цвета карточек на mobile

@@ -1,4 +1,4 @@
-const platformRate = document.querySelectorAll('[data-category="platform-rate"]');
+const platformRate = document.querySelectorAll('[data-class="platform-rate"]');
 
 const addPlatformRateColors = () => {
   platformRate.forEach((platform) => {
