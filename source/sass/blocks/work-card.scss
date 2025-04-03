@@ -161,75 +161,41 @@
 
   &__platform-rate[data-platform="skillbox"] {
     width: size(186px);
-    background-color: #DFE1FF;
 
     @include vp-1023 {
       width: 150px;
-    }
-
-    &::before {
-      width: 57%;
-      background-color: #323BE1;
     }
   }
 
   &__platform-rate[data-platform="skillfactory"] {
     width: size(273px);
-    background-color: rgba(130, 217, 124, 0.3);
-    // background-image: linear-gradient(to right, #5CAF56 60%, rgba(130, 217, 124, 0.3) 60%);
 
     @include vp-1023 {
       width: 195px;
-    }
-
-    &::before {
-      width: 70%;
-      background-color: #5CAF56;
     }
   }
 
   &__platform-rate[data-platform="geekbrains"] {
     width: size(347px);
-    background-color: #e7e7e7;
-    // background-image: linear-gradient(to right, #222222 60%, #e7e7e7 60%);
 
     @include vp-1023 {
       width: 250px;
-    }
-
-    &::before {
-      width: 42%;
-      background-color: #222222;
     }
   }
 
   &__platform-rate[data-platform="netology"] {
     width: size(276px);
-    background-color: #ffcfe0;
-    // background-image: linear-gradient(to right, #eb236b 60%, #ffcfe0 60%);
 
     @include vp-1023 {
       width: 200px;
-    }
-
-    &::before {
-      width: 76%;
-      background-color: #eb236b;
     }
   }
 
   &__platform-rate[data-platform="skypro"] {
     width: size(302px);
-    background-color: #cdedff;
-    // background-image: linear-gradient(to right, #54bff9 60%, #cdedff 60%);
 
     @include vp-1023 {
       width: 220px;
-    }
-
-    &::before {
-      width: 45%;
-      background-color: #54bff9;
     }
   }
 }

@@ -13,7 +13,7 @@ mixin work-card(card)
           .work-card__popularity-item
             .work-card__logo-wrapper
               img(src= `img/content/platforms-logo/${item.name}.svg`, width=24, height=24, alt=`Логотип ${item.name}`)
-            .work-card__platform-rate(data-platform=item.name, data-rate=item.rate)
+            .work-card__platform-rate(data-category="platform-rate" data-platform=item.name, data-rate=item.rate, data-color=item.color, data-accent=item.accentColor)
               span.visually-hidden= `Рейтинг курса по профессии на обучающей платформе ${item.name}`
 
 

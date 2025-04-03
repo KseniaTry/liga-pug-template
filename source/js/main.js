@@ -9,6 +9,7 @@ import { initPromoSwitcher } from './modules/promo/promo-switcher.js';
 import './vendor.js';
 import { initPromoSlider } from './modules/promo/promo-slider.js';
 import { addCardsHover } from './modules/directions/directions-color-change.js';
+import { addPlatformRateColors } from './modules/work-card.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -37,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPromoSwitcher();
     initPromoSlider();
     addCardsHover();
+    addPlatformRateColors();
   });
 });
 
