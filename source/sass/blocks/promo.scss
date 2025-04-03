@@ -169,16 +169,20 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: size(23px);
+    box-shadow: 0 3px 31px 0 rgba(112, 144, 176, 0.02);
     cursor: pointer;
 
     &:last-child {
       margin-bottom: size(12px);
     }
+
+    &:hover {
+      background-color: $color-solitude;
+    }
   }
 
   &__content-button[data-active="is-active"] {
     background-color: $color-accent-main;
-    box-shadow: 0 3px 31px 0 rgba(112, 144, 176, 0.02);
     pointer-events: none;
   }
 

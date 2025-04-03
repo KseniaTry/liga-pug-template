@@ -153,9 +153,9 @@
       border-top-left-radius: size(5px);
       border-bottom-left-radius: size(5px);
 
-    @include vp-1023 {
-      height: 12px;
-    }
+      @include vp-1023 {
+        height: 12px;
+      }
     }
   }
 

@@ -60,13 +60,13 @@
     }
   }
 
+  &:hover {
+    box-shadow: 0 20px 40px -10px rgba(72, 109, 216, 0.6);
+  }
+
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
