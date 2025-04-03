@@ -1,6 +1,10 @@
 .promo {
   padding: 0 0 size(123px);
 
+  @include vp-767 {
+    padding: 80px 0 141px;
+  }
+
   &__promo-wrapper {
     // height: size(935px);
     padding: size(81px) size(108px) size(83px) size(88px);
@@ -29,9 +33,10 @@
       }
 
       @include vp-767 {
+        margin: 0;
         margin-bottom: 25px;
         font-size: 21px;
-        line-height: 21px;
+        line-height: 115%;
         text-align: start;
       }
     }
@@ -52,7 +57,12 @@
   &__content-wrapper {}
 
   &__slide {
-    // swiper-slide
+    @include vp-767 {
+      padding-top: 10px;
+    }
+  }
+
+  &__slide-wrapper {
     width: size(396px);
     display: flex;
     flex-wrap: wrap;
@@ -65,9 +75,9 @@
       padding: 0 20px 39px;
       width: 280px;
       border-radius: 34px;
-      border: 1px solid #eeeeee;
+      border: 1px solid $color-gray;
       box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.06);
-      background: #f8f7fc;
+      background-color: $color-purple;
     }
   }
 
@@ -114,7 +124,7 @@
     h3 {
       margin-bottom: size(21px);
       font-size: size(30px);
-      line-height: size(33px); // 100% по макету не прошло бы PP, 110 ok
+      line-height: 110%;
       font-weight: 800;
       color: $color-accent-main;
 
@@ -124,6 +134,8 @@
       }
 
       @include vp-767 {
+        margin: 0;
+        margin-bottom: 14px;
         font-size: 18px;
         line-height: 18px;
       }
@@ -140,6 +152,7 @@
       }
 
       @include vp-767 {
+        margin: 0;
         font-size: 14px;
         line-height: 22.4px;
       }
@@ -273,8 +286,16 @@
     }
   }
 
+  &__swiper-navigation .swiper-button-next {
+    right: 29%;
+  }
+
+  &__swiper-navigation .swiper-button-prev {
+    left: 29%;
+  }
+
   &__button--prev,
   &__button--next {
-    top: 57%;
+    top: 95.5%;
   }
 }

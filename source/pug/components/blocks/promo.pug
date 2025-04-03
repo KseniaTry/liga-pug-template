@@ -47,11 +47,12 @@ mixin promo()
           .promo__content-wrapper(data-id='content-wrapper')
             for item in promoItems
               .promo__slide(data-id=item.id, data-active= item.isActive ? "is-active" : "not-active")
-                .promo__image-wrapper
-                  +picture(item.imagePath, item.imageName, item.imageType, 425, 425, item.imageAlt)
-                .promo__description-wrapper
-                  h3= item.title
-                  p= item.description
+                .promo__slide-wrapper
+                  .promo__image-wrapper
+                    +picture(item.imagePath, item.imageName, item.imageType, 425, 425, item.imageAlt)
+                  .promo__description-wrapper
+                    h3= item.title
+                    p= item.description
           .promo__content-buttons-wrapper
               for item in promoItems
                 .promo__content-button(data-class="content-button", data-id=item.id, data-active= item.isActive ? "is-active" : "not-active")
@@ -60,9 +61,9 @@ mixin promo()
                   .promo__text-wrapper
                     h4= item.buttonTitle
                     p= item.buttonText
-          .promo__swiper-navigation.arrows
-            button.promo__button--prev.swiper-button-prev.arrows__button.arrows__button--prev(type='button', aria-label='Кнопка переключения предыдущего слайда')
-            button.promo__button--next.swiper-button-next.arrows__button.arrows__button--next(type='button', aria-label='Кнопка переключения следующего слайда')
+        .promo__swiper-navigation.arrows
+          button.promo__button--prev.swiper-button-prev.arrows__button.arrows__button--prev(type='button', aria-label='Кнопка переключения предыдущего слайда')
+          button.promo__button--next.swiper-button-next.arrows__button.arrows__button--next(type='button', aria-label='Кнопка переключения следующего слайда')
 
 
 
