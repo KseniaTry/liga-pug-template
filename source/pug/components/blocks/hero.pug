@@ -27,7 +27,10 @@ mixin hero()
           br
           |в одном месте
         p Изучение тем на вебинарах с преподавателями, личные консультации с наставником. После прохождения курса с наставником. После прохождения курса
-        a.hero__button(href="#").btn= "Сравнить курсы"
+        a.hero__button(href="#").btn
+          span= "Сравнить курсы"
+          span.btn__icon-wrapper
+            +icon("button-icon", 18, 18)
       .hero__image-wrapper
         +picture("content/hero", "excited-man", "png", 502, 590, "Радующийся мужчина в оранжевом свитере")
       .hero__work-card
