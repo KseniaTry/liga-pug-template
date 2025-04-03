@@ -12,38 +12,42 @@ let promoSwiper;
 const initPromoSwiper = () => {
   promoSwiper = new Swiper(promoSlider, {
     slideClass: 'promo__slide',
-    // slidesPerView: 1,
+    slidesPerView: 1,
     loop: true,
-    // autoHeight: true,
-    allowTouchMove: true,
+    loopedSlides: 1,
+
+    // allowTouchMove: true,
     navigation: {
       prevEl: '.promo__button--prev',
       nextEl: '.promo__button--next',
     },
     on: {
       init() {
-        // var swiper = this;
-        // buttonNext.addEventListener('click', () => {
-        //   next();
-        // })
-
-        // buttonPrev.addEventListener('click', () => {
-        //   prev();
-        // })
+        var swiper = this;
+        if (swiper.originalParams.loop && swiper.loopedSlides < swiper.originalParams.slidesPerView) {
+          swiper.params.slidesPerView = swiper.loopedSlides;
+          swiper.destroy(false, false);
+          swiper.init();
+        }
       }
     }
+  });
 
-    //     if (swiper.originalParams.loop && swiper.loopedSlides < swiper.originalParams.slidesPerView) {
-    //     swiper.params.slidesPerView = swiper.loopedSlides;
-    //     swiper.destroy(false, false);
-    //     swiper.init();
-    //     }
-    // }
-      // }
-});
+
+  buttonNext.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const activeSlideIndex = promoSwiper.realIndex;
+    console.log(activeSlideIndex);
+    // promoSwiper.slideToLoop(2);
+    promoSwiper.nextSlide();
+  });
+
+  buttonPrev.addEventListener('click', () => {
+    const activeSlideIndex = promoSwiper.realIndex;
+    console.log(activeSlideIndex);
+
+  });
 }
-
-
 
 
 

@@ -6,7 +6,7 @@ const resetDataset = () => {
     if (button.dataset.active === 'is-active') {
       button.dataset.active = 'not-active';
       const slide = contentWrapper.querySelector(`[data-id="${button.dataset.id}"]`);
-      slide.dataset.active = 'not-active';
+      slide.dataset.slideActive = 'slide-not-active';
     }
   });
 }
@@ -18,7 +18,7 @@ const switchItem = () => {
 
       button.dataset.active = 'is-active';
       const slide = contentWrapper.querySelector(`[data-id="${button.dataset.id}"]`);
-      slide.dataset.active = 'is-active';
+      slide.dataset.slideActive = 'slide-is-active';
     })
   })
 }

@@ -81,7 +81,7 @@
     }
   }
 
-  &__slide[data-active="not-active"] {
+  &__slide[data-slide-active="not-active"] {
     display: none;
   }
 
@@ -238,7 +238,7 @@
     }
   }
 
-  &__content-button[data-active="is-active"] .promo__icon-wrapper {
+  &__content-button[data-active="slide-is-active"] .promo__icon-wrapper {
     background-color: $color-royal-blue;
     border-color: $color-royal-blue;
 
