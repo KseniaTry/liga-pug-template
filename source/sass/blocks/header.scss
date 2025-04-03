@@ -50,6 +50,37 @@
     }
   }
 
+  &__logo-desktop {
+    width: 118px;
+    height: 38;
+
+    @include vp-1023 {
+      display: none;
+    }
+
+    img {
+      width: 118px;
+      height: 38px;
+      object-fit: cover;
+    }
+  }
+
+  &__logo-mobile {
+    width: 23px;
+    height: 27;
+    display: none;
+
+    @include vp-1023 {
+      display: block;
+    }
+
+    img {
+      width: 23px;
+      height: 27px;
+      object-fit: cover;
+    }
+  }
+
   &__menu {
     position: relative;
     width: 100%;
