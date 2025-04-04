@@ -5,23 +5,31 @@
     padding: 3px 0 98px;
   }
 
-  h2 {
-    margin: 0;
-    margin-bottom: size(52px);
-
-    font-size: size(40px);
-    line-height: 100%;
-    font-weight: 700;
-    color: $color-night-rider-2;
-
-    @include vp-1023 {
-      font-size: 20px;
+  &__main-wrapper {
+    @include vp-767 {
+      padding: 0;
     }
 
-    @include vp-767 {
-      margin-bottom: 30px;
-      font-size: 21px;
+    h2 {
+      margin: 0;
+      margin-bottom: size(52px);
+
+      font-size: size(40px);
       line-height: 100%;
+      font-weight: 700;
+      color: $color-night-rider-2;
+
+      @include vp-1023 {
+        padding: 0 10%;
+        font-size: 20px;
+      }
+
+      @include vp-767 {
+        padding: 0 6.25%;
+        margin-bottom: 30px;
+        font-size: 21px;
+        line-height: 100%;
+      }
     }
   }
 
@@ -34,6 +42,12 @@
     align-items: center;
     column-gap: size(18px);
     row-gap: size(47px);
+
+    @include vp-767 {
+      flex-wrap: nowrap;
+      margin: 0 auto;
+      width: 280px;
+    }
   }
 
   &__card {
@@ -44,7 +58,7 @@
     }
 
     @include vp-767 {
-      width: 100%;
+      width: 280px;
     }
   }
 
@@ -56,8 +70,16 @@
     }
   }
 
+  &__swiper-navigation .swiper-button-next {
+    right: 29%;
+  }
+
+  &__swiper-navigation .swiper-button-prev {
+    left: 29%;
+  }
+
   &__button--prev,
   &__button--next {
-    top: 57%;
+    top: 50%;
   }
 }

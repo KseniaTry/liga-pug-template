@@ -14,10 +14,10 @@ mixin directions()
         items: ["Web-разработка", "DevOps", "JavaScript-разработка", "ReactJS", "Мобильная разработка", "GIT", "Системное администрирование", "Верстка на HTML/CSS", "Unity"]
       },
       {
-        title: "Менеджмент",
-        id: "management",
-        color: "#FFCCBD",
-        items: ["Product-менеджмент", "Личностный рост", "Управление разработкой и IT", "AGILE", "Бренд-менеджмент", "Запуск стартапов", "Финансовая аналитика", "Бухгалтерия", "Управление в SMM", "IT-рекрутмент"]
+        title: "Маркетинг",
+        id: "marketing",
+        color: "#FFB985",
+        items: ["Web-аналитика", "SMM-продвижение", "Интернет-маркетинг", "PR-менеджмент", "SEO-продвижение", "Копирайтинг", "Контент-маркетинг", "SERM и репутация", "Маркетинговая аналитика", "Google Ads"]
       },
       {
         title: "Аналитика",
@@ -26,26 +26,26 @@ mixin directions()
         items: ["Data Science", "Продуктовая аналитика", "Системная аналитика", "Бизнес-аналитика", "Аналитика на R", "Работа с Excel и Google таблицами", "Машинное обучение", "Нейронные сети"]
       },
       {
-        title: "Маркетинг",
-        id: "marketing",
-        color: "#FFB985",
-        items: ["Web-аналитика", "SMM-продвижение", "Интернет-маркетинг", "PR-менеджмент", "SEO-продвижение", "Копирайтинг", "Контент-маркетинг", "SERM и репутация", "Маркетинговая аналитика", "Google Ads"]
-      },
-      {
         title: "Финансы",
         id: "finance",
         color: "#6CB7F2",
         items: ["Web-аналитика", "SMM-продвижение", "Интернет-маркетинг", "PR-менеджмент", "SEO-продвижение", "Копирайтинг", "Контент-маркетинг", "SERM и репутация", "Маркетинговая аналитика", "Google Ads"]
       },
+      {
+        title: "Менеджмент",
+        id: "management",
+        color: "#FFCCBD",
+        items: ["Product-менеджмент", "Личностный рост", "Управление разработкой и IT", "AGILE", "Бренд-менеджмент", "Запуск стартапов", "Финансовая аналитика", "Бухгалтерия", "Управление в SMM", "IT-рекрутмент"]
+      },
       ]
 
   section.directions
-    .container
+    .container.directions__main-wrapper
       h2= "Выбери направление"
-      .directions__swiper
-        .directions__swiper-wrapper
+      .directions__swiper(data-class="directions-swiper")
+        .directions__swiper-wrapper(data-class="directions-swiper-wrapper")
           each direction in directionsList
-            .directions__card
+            .directions__card(data-class="directions-slide")
               a.directions__link(href="#")
                 span.visually-hidden= `Подробнее о направлении "${direction.title}"`
                 +direction-card(direction.title, direction.id, direction.items, direction.color)
