@@ -1,6 +1,7 @@
 .btn {
   position: relative;
-  display: inline-flex;
+  display: flex;
+  width: size(306px);
   justify-content: space-between;
   align-items: center;
   gap: size(25px);
@@ -19,6 +20,7 @@
   transition: opacity $trans-default;
 
   @include vp-1023 {
+    width: 191px;
     font-size: 12px;
   }
 
@@ -27,6 +29,14 @@
     font-size: 14px;
     border-radius: 12px;
     gap: 13px;
+  }
+
+  &__text {
+    width: size(130px);
+
+    @include vp-1023 {
+      width: 120px;
+    }
   }
 
   &__icon-wrapper {

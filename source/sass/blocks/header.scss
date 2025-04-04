@@ -84,6 +84,7 @@
   &__menu {
     position: relative;
     width: 100%;
+    // width: size(1278px);
     padding: 0 size(321px);
     padding-top: size(50px);
     border-top: size(0.7px) solid $color-whisper;
@@ -116,10 +117,13 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    width: size(1278px);
 
     display: flex;
     justify-content: flex-start;
-    gap: 97px;
+    flex-wrap: wrap;
+    column-gap: size(97px);
+    row-gap: size(50px);
 
     @include vp-1023 {
       flex-direction: column;
