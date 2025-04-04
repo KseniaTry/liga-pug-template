@@ -10,6 +10,7 @@ import './vendor.js';
 import { initPromoSlider } from './modules/promo/promo-slider.js';
 import { addCardsHover } from './modules/directions/directions-color-change.js';
 import { addPlatformRateColors } from './modules/work-card.js';
+import { hideMobileNavItems } from './modules/menu/nav-hide.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPromoSlider();
     addCardsHover();
     addPlatformRateColors();
+    hideMobileNavItems();
   });
 });
 

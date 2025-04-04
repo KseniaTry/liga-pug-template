@@ -29,14 +29,6 @@
 
   &__item {
     margin-right: 20px;
-
-    @include vp-1023 {
-      display: none;
-    }
-
-    &:nth-child(2) {
-      display: block;
-    }
   }
 
   &__link {

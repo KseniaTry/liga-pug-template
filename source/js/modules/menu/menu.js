@@ -32,43 +32,65 @@ const openItem = () => {
       if (!item.classList.contains('is-open')) {
         closeMenu();
       }
+
       // закрытие и открытие пункта при клике на него
       const menuContent = item.querySelector('[data-name="menu-content-list"]');
       item.classList.toggle('is-open');
       menuContent.classList.toggle('is-open');
-
     })
   })
 }
 
-const openMenu = () => {
-  document.addEventListener('keydown', onDocumentEscKeyDown);
-
-  if (breakpoint.matches) {
-    openItem();
-  } else {
-    menuButton.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      menuButton.classList.toggle('is-open');
-      menu.classList.toggle('is-open');
-      header.classList.toggle('is-open');
-      openItem();
+const openItemByHover = () => {
+  menuItems.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+      // if (!item.classList.contains('is-open')) {
+      //   closeMenu();
+      // }
+      // закрытие и открытие пункта при клике на него
+      const menuContent = item.querySelector('[data-name="menu-content-list"]');
+      item.classList.toggle('is-open');
+      menuContent.classList.toggle('is-open');
     })
-  }
-}
 
-const closeMenuOnPageClick = () => {
-  document.body.addEventListener('click', (evt) => {
-    if (evt.target.closest('[data-name="menu"]') === null) {
-      closeMenu();
-    }
+    item.addEventListener('mouseout', (evt) => {
+      evt.preventDefault();
+      if (!item.classList.contains('click')) {
+        closeMenu();
+      }
+    });
   });
-};
+  };
 
-const initMenu = () => {
-  openMenu();
-  closeMenuOnPageClick();
-}
+  const openMenu = () => {
+    document.addEventListener('keydown', onDocumentEscKeyDown);
 
-export { initMenu }
+    if (breakpoint.matches) {
+      openItem();
+      openItemByHover();
+    } else {
+      menuButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        menuButton.classList.toggle('is-open');
+        menu.classList.toggle('is-open');
+        header.classList.toggle('is-open');
+        openItem();
+      })
+    }
+  }
+
+  const closeMenuOnPageClick = () => {
+    document.body.addEventListener('click', (evt) => {
+      if (evt.target.closest('[data-name="menu"]') === null) {
+        closeMenu();
+      }
+    });
+  };
+
+  const initMenu = () => {
+    openMenu();
+    closeMenuOnPageClick();
+  }
+
+  export { initMenu }
 

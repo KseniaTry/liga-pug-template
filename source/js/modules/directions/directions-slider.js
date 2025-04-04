@@ -4,7 +4,7 @@ import { TABLET_MIN_WIDTH } from '../../const';
 
 // инициализация свайпера происходит только при переключении на мобильную версию
 const directionsSlider = document.querySelector('[data-class="directions-swiper"]');
-const breakpoint = window.matchMedia(`(max-width: ${TABLET_MIN_WIDTH - 1}px)`); // 767
+const breakpoint = window.matchMedia(`(max-width: ${TABLET_MIN_WIDTH - 1}px)`);
 const directionsSwiperWrapper = document.querySelector('[data-class="directions-swiper-wrapper"]');
 const directionsSlides = document.querySelectorAll('[data-class="directions-slide"]');
 let directionsSwiper;

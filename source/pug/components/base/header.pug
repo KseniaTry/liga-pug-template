@@ -139,7 +139,7 @@ mixin header(headerMods, currentUrl)
             ul.main-nav__list
               each link in headerLinks
                 - const activeState = currentUrl === link.href
-                li.main-nav__item
+                li.main-nav__item(data-class="nav-item", data-id=link.id)
                   if(activeState)
                     span.main-nav__link.is-active= link.text
                   else
