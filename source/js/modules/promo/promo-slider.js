@@ -4,8 +4,6 @@ const promoSlider = document.querySelector('.promo__content');
 const breakpoint = window.matchMedia('(max-width: 767px)');
 const promoSwiperWrapper = document.querySelector('.promo__content-wrapper');
 const promoSlides = document.querySelectorAll('.promo__slide');
-const buttonNext = document.querySelector('.promo__button--next');
-const buttonPrev = document.querySelector('.promo__button--prev');
 const TABLET_MIN_WIDTH = 768;
 let promoSwiper;
 
@@ -15,56 +13,11 @@ const initPromoSwiper = () => {
     slidesPerView: 1,
     loop: true,
     loopedSlides: 1,
-
-    // allowTouchMove: true,
     navigation: {
       prevEl: '.promo__button--prev',
       nextEl: '.promo__button--next',
     },
-    on: {
-      init() {
-        var swiper = this;
-        if (swiper.originalParams.loop && swiper.loopedSlides < swiper.originalParams.slidesPerView) {
-          swiper.params.slidesPerView = swiper.loopedSlides;
-          swiper.destroy(false, false);
-          swiper.init();
-        }
-      }
-    }
   });
-
-
-  buttonNext.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    const activeSlideIndex = promoSwiper.realIndex;
-    console.log(activeSlideIndex);
-    // promoSwiper.slideToLoop(2);
-    promoSwiper.nextSlide();
-  });
-
-  buttonPrev.addEventListener('click', () => {
-    const activeSlideIndex = promoSwiper.realIndex;
-    console.log(activeSlideIndex);
-
-  });
-}
-
-
-
-function next() {
-  if (data[promoSwiper.realIndex + 1]) {
-    promoSwiper.slideNext(500)
-  } else {
-    promoSwiper.slideToLoop(0)
-  }
-}
-
-function prev() {
-  if (data[promoSwiper.realIndex - 1]) {
-    promoSwiper.slidePrev(500)
-  } else {
-    promoSwiper.slideToLoop(data.length - 1)
-  }
 }
 
 const breakpointChecker = () => {
