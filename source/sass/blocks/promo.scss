@@ -14,6 +14,7 @@
 
     @include vp-767 {
       padding: 0;
+
       border: none;
       background-color: transparent;
       box-shadow: none;
@@ -22,6 +23,7 @@
     h2 {
       margin: size(6px) 0 size(20px) size(56px);
       width: 92%;
+
       font-size: size(40px);
       line-height: 115%; // 100% по макету не прошло бы PP, 115 ok
       font-weight: 700;
@@ -35,6 +37,7 @@
       @include vp-767 {
         margin: 0;
         margin-bottom: 25px;
+
         font-size: 21px;
         line-height: 115%;
         text-align: start;
@@ -58,7 +61,7 @@
 
   &__slide {
     @include vp-767 {
-      padding-top: 10px;
+      padding-top: 85px;
     }
   }
 
@@ -71,9 +74,11 @@
 
     @include vp-767 {
       position: relative;
-      height: 439px;
       padding: 0 20px 39px;
+      margin: 0 auto;
       width: 280px;
+      height: 439px;
+
       border-radius: 34px;
       border: 1px solid $color-gray;
       box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.06);
@@ -81,8 +86,12 @@
     }
   }
 
-  &__slide[data-slide-active="not-active"] {
+  &__slide[data-slide-active="slide-not-active"] {
     display: none;
+
+    @include vp-767 {
+      display: block;
+    }
   }
 
   &__image-wrapper {
@@ -238,7 +247,7 @@
     }
   }
 
-  &__content-button[data-active="slide-is-active"] .promo__icon-wrapper {
+  &__content-button[data-active="is-active"] .promo__icon-wrapper {
     background-color: $color-royal-blue;
     border-color: $color-royal-blue;
 

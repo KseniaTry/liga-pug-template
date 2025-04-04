@@ -43,10 +43,10 @@ mixin promo()
     .container
       .promo__promo-wrapper
         h2 Агрегируем курсы по самым актуальным темам для новичков и практикующих специалистов.
-        .promo__content.swiper
-          .promo__content-wrapper.swiper-wrapper(data-id='content-wrapper')
+        .promo__content
+          .promo__content-wrapper(data-id='content-wrapper')
             for item in promoItems
-              .promo__slide.swiper-slide(data-id=item.id, data-slide-active= item.isActive ? "slide-is-active" : "slide-not-active")
+              .promo__slide(data-id=item.id, data-slide-active= item.isActive ? "slide-is-active" : "slide-not-active")
                 .promo__slide-wrapper
                   .promo__image-wrapper
                     +picture(item.imagePath, item.imageName, item.imageType, 425, 425, item.imageAlt)
