@@ -126,6 +126,7 @@
     row-gap: size(50px);
 
     @include vp-1023 {
+      width: 100%;
       flex-direction: column;
       padding-top: 0;
       padding: 26px 0 48px;
