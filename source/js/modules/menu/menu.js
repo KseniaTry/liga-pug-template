@@ -41,8 +41,6 @@ const openItem = () => {
   })
 }
 
-
-
 const openMenu = () => {
   document.addEventListener('keydown', onDocumentEscKeyDown);
 
