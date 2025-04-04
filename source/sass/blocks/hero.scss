@@ -100,7 +100,7 @@
 
   &__work-card {
     position: absolute;
-    bottom: size(-192px);
+    top: size(495px);
     right: size(392px);
 
     @include vp-1023 {

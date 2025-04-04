@@ -128,6 +128,9 @@
     @include vp-767 {
       margin-top: auto;
       width: 100%;
+      height: 168px;
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
 
     h3 {
@@ -261,6 +264,7 @@
 
     h4 {
       margin: 0;
+      margin-bottom: 4px;
       font-size: size(25px);
       line-height: size(25.6px);
       font-weight: 400;

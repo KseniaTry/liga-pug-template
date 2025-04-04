@@ -19,7 +19,7 @@
   }
 
   &__title-wrapper {
-    width: size(276px);
+    width: size(287px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-end;
@@ -70,6 +70,7 @@
   }
 
   &__stats-wrapper {
+    width: size(134px);
     margin-top: size(5px);
 
     @include vp-1023 {
@@ -87,7 +88,6 @@
 
       @include vp-1023 {
         font-size: 12px;
-
       }
     }
   }
