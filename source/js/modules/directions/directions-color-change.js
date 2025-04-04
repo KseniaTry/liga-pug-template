@@ -1,5 +1,6 @@
+import { DEFAULT_CARD_COLOR } from "../../const";
+
 const directionsCards = document.querySelectorAll('[data-class="direction-card"]');
-const DEFAULT_CARD_COLOR = '#ffffff';
 
 // изменение цвета карточек на mobile
 const changeCardsColor = () => {

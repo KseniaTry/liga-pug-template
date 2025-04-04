@@ -42,9 +42,16 @@
     color: $color-default-black;
     font-weight: 500;
 
-  &:hover {
-    opacity: 0.8;
-  }
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active,
+    &.is-active {
+      color: $color-accent-main;
+      font-weight: 600;
+    }
 
     @include vp-1023 {
       font-size: 19px;
@@ -54,11 +61,6 @@
 
     @include vp-767 {
       font-size: 14px;
-    }
-
-    &.is-active {
-      color: $color-accent-main;
-      font-weight: 600;
     }
   }
 

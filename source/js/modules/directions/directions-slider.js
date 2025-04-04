@@ -1,12 +1,12 @@
 import { addSwiperClass, removeSwiperClass } from '../../utils/swiper-class-switcher';
 import { changeCardsColor, resetCardsColor } from './directions-color-change';
+import { TABLET_MIN_WIDTH } from '../../const';
 
 // инициализация свайпера происходит только при переключении на мобильную версию
 const directionsSlider = document.querySelector('[data-class="directions-swiper"]');
-const breakpoint = window.matchMedia('(max-width: 767px)');
+const breakpoint = window.matchMedia(`(max-width: ${TABLET_MIN_WIDTH - 1}px)`); // 767
 const directionsSwiperWrapper = document.querySelector('[data-class="directions-swiper-wrapper"]');
 const directionsSlides = document.querySelectorAll('[data-class="directions-slide"]');
-const TABLET_MIN_WIDTH = 768;
 let directionsSwiper;
 
 const initDirectionsSwiper = () => {
