@@ -43,10 +43,10 @@ mixin promo()
     .container
       .promo__promo-wrapper
         h2 Агрегируем курсы по самым актуальным темам для новичков и практикующих специалистов.
-        .promo__content
-          .promo__content-wrapper(data-id='content-wrapper')
+        .promo__content(data-class='promo-content')
+          .promo__content-wrapper(data-class='promo-content-wrapper')
             for item in promoItems
-              .promo__slide(data-id=item.id, data-slide-active= item.isActive ? "slide-is-active" : "slide-not-active")
+              .promo__slide(data-class="promo-slide", data-id=item.id, data-slide-active= item.isActive ? "slide-is-active" : "slide-not-active")
                 .promo__slide-wrapper
                   .promo__image-wrapper
                     +picture(item.imagePath, item.imageName, item.imageType, 425, 425, item.imageAlt)
@@ -55,7 +55,7 @@ mixin promo()
                     p= item.description
           .promo__content-buttons-wrapper
               for item in promoItems
-                .promo__content-button(data-class="content-button", data-id=item.id, data-active= item.isActive ? "is-active" : "not-active")
+                .promo__content-button(data-class="promo-content-button", data-id=item.id, data-active= item.isActive ? "is-active" : "not-active")
                   .promo__icon-wrapper
                     +icon(item.id, 25, 25)
                   .promo__text-wrapper
