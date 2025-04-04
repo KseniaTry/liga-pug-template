@@ -11,7 +11,6 @@ const isEscapeKey = (evt) => evt.key === 'Escape'; // функция, котор
 const closeMenu = () => {
   menuItems.forEach((item) => {
     if (item.classList.contains('is-open')) {
-      // item.classList.remove('click');
       item.classList.remove('is-open');
       const menuContent = item.querySelector('[data-name="menu-content-list"]');
       menuContent.classList.remove('is-open');
@@ -26,12 +25,6 @@ function onDocumentEscKeyDown(evt) {
   }
 }
 
-// const removeClickClass = () => {
-//   menuItems.forEach((item) => {
-//     if item.classList.contains('click')
-//   });
-// }
-
 const openItem = () => {
   menuItems.forEach((item) => {
     // закрытие текущего пункта при клике на другой пункт
@@ -42,41 +35,19 @@ const openItem = () => {
       // закрытие и открытие пункта при клике на него
       const menuContent = item.querySelector('[data-name="menu-content-list"]');
       item.classList.toggle('is-open');
-      item.classList.toggle('click');
       menuContent.classList.toggle('is-open');
 
     })
   })
 }
 
-const openItemByHover = () => {
-  menuItems.forEach((item) => {
-    item.addEventListener('mouseover', () => {
-      // item.classList.add('mouseover');
-      if (!item.classList.contains('is-open')) {
-        closeMenu();
-      }
-      // закрытие и открытие пункта при клике на него
-      const menuContent = item.querySelector('[data-name="menu-content-list"]');
-      item.classList.toggle('is-open');
-      menuContent.classList.toggle('is-open');
-    })
 
-    if (item.classList.contains('is-open click')) {
-      item.addEventListener('mouseout', () => {
-        closeMenu();
-      });
-      }
-
-  })
-}
 
 const openMenu = () => {
   document.addEventListener('keydown', onDocumentEscKeyDown);
 
   if (breakpoint.matches) {
     openItem();
-    openItemByHover();
   } else {
     menuButton.addEventListener('click', (evt) => {
       evt.preventDefault();
