@@ -9,7 +9,6 @@
   column-gap: size(26px);
   row-gap: size(70px);
   overflow-x: hidden;
-  overflow-y: scroll;
 
   @include vp-1023 {
     row-gap: 20px;
