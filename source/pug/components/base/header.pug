@@ -147,7 +147,7 @@ mixin header(headerMods, currentUrl)
       .header__menu(data-name="menu")
         ul.header__menu-list(data-name="menu-list")
           each item in headerNavLinks
-            li.header__menu-item(data-name="menu-item")
+            li.header__menu-item(data-name="menu-item", data-id=item.title)
               a.header__menu-link(href=item.href)= item.title
               if item.sublevel
                 ul.header__menu-content-list(data-name="menu-content-list")

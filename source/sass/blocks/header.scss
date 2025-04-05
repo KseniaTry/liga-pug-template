@@ -84,7 +84,6 @@
   &__menu {
     position: relative;
     width: 100%;
-    // width: size(1278px);
     padding: 0 size(321px);
     padding-top: size(50px);
     border-top: size(0.7px) solid $color-whisper;
@@ -173,9 +172,8 @@
     }
   }
 
-  &__menu-item.is-open
-  // &__menu-item:hover
-  {
+  &__menu-item.is-open,
+  &__menu-item.is-open-by-hover {
     &::after {
       transform: rotate(180deg);
       background-color: $color-accent-main;
@@ -183,9 +181,7 @@
   }
 
   &__menu-item.is-open &__menu-link,
-  &__menu-item.is-open-by-mouseover &__menu-link
-  // &__menu-item:hover &__menu-link
-  {
+  &__menu-item.is-open-by-hover &__menu-link {
     color: $color-accent-main;
     font-weight: 600;
   }
@@ -200,9 +196,8 @@
     }
   }
 
-  &__menu-content-list.is-open
-  // &__menu-item:hover .header__menu-content-list
-   {
+  &__menu-content-list.is-open,
+  &__menu-content-list.is-open-by-hover {
     display: block;
     position: absolute;
     left: size(-15px);

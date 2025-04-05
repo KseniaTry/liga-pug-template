@@ -6,7 +6,6 @@ const breakpoint = window.matchMedia(`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`);
 
 const hideItems = () => {
   navItems.forEach((item) => {
-    console.log(item.dataset.id);
     if (item.dataset.id !== SHOWN_NAV_ITEM_ID) {
       item.style.display = 'none';
     }
