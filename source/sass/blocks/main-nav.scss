@@ -19,7 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    column-gap: size(172px);
+    column-gap: size(153px);
     row-gap: size(20px);
 
     @include vp-1023 {
