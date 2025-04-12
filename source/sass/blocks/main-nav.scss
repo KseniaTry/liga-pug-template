@@ -1,5 +1,5 @@
 .main-nav {
-  width: size(860px);
+  width: size(780px);
 
   @include vp-1023 {
     width: 60%;
@@ -12,7 +12,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    width: size(860px);
 
     display: flex;
     flex-wrap: wrap;
