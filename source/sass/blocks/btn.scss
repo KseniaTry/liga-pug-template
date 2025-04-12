@@ -40,12 +40,11 @@
   }
 
   &__icon-wrapper {
-    display: inline-block;
-    width: size(45px);
-    height: size(45px);
     display: flex;
     align-items: center;
     justify-content: center;
+    width: size(45px);
+    height: size(45px);
     background-color: $color-cornflower-blue;
     border-radius: 50%;
 

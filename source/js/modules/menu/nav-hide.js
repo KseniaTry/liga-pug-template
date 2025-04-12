@@ -1,5 +1,5 @@
-import { DESKTOP_MIN_WIDTH } from "../../const";
-import { SHOWN_NAV_ITEM_ID } from "../../const";
+import {DESKTOP_MIN_WIDTH} from '../../const';
+import {SHOWN_NAV_ITEM_ID} from '../../const';
 
 const navItems = document.querySelectorAll('[data-class="nav-item"]');
 const breakpoint = window.matchMedia(`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`);
@@ -10,19 +10,19 @@ const hideItems = () => {
       item.style.display = 'none';
     }
   });
-}
+};
 
 const showItems = () => {
   navItems.forEach((item) => {
     item.style.display = 'block';
   });
-}
+};
 
 const breakpointChecker = () => {
   if (breakpoint.matches) {
     hideItems();
   } else {
-    showItems()
+    showItems();
   }
 };
 
@@ -34,4 +34,4 @@ const hideMobileNavItems = () => {
   }
 };
 
-export { hideMobileNavItems }
+export {hideMobileNavItems};

@@ -9,7 +9,7 @@ const resetDataset = () => {
       slide.dataset.slideActive = 'slide-not-active';
     }
   });
-}
+};
 
 const switchItem = () => {
   promoButtons.forEach((button) => {
@@ -19,12 +19,12 @@ const switchItem = () => {
       button.dataset.active = 'is-active';
       const slide = contentWrapper.querySelector(`[data-id="${button.dataset.id}"]`);
       slide.dataset.slideActive = 'slide-is-active';
-    })
-  })
-}
+    });
+  });
+};
 
 const initPromoSwitcher = () => {
   switchItem();
-}
+};
 
-export { initPromoSwitcher }
+export {initPromoSwitcher};

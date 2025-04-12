@@ -1,4 +1,4 @@
-import { DESKTOP_MIN_WIDTH } from "../../const";
+import {DESKTOP_MIN_WIDTH} from '../../const';
 
 const menuItems = document.querySelectorAll('[data-name="menu-item"]');
 const breakpoint = window.matchMedia(`(min-width: ${DESKTOP_MIN_WIDTH}px)`);
@@ -17,8 +17,8 @@ const closeItem = (className) => {
       item.classList.remove(className);
       menuContent.classList.remove(className);
     }
-  })
-}
+  });
+};
 
 function onDocumentEscKeyDown(evt) {
   if (isEscapeKey(evt)) {
@@ -52,9 +52,9 @@ const openItem = () => {
         item.removeEventListener('mouseover');
         item.removeEventListener('mouseout');
       }
-    })
-  })
-}
+    });
+  });
+};
 
 // открытие меню по hover
 const openItemByHover = () => {
@@ -72,13 +72,13 @@ const openItemByHover = () => {
             menuItem.classList.remove('is-open');
             menuContent.classList.remove('is-open');
           }
-        })
+        });
 
         // закрытие и открытие пункта при hover
         const menuContent = item.querySelector('[data-name="menu-content-list"]');
         item.classList.toggle('is-open-by-hover');
         menuContent.classList.toggle('is-open-by-hover');
-      })
+      });
 
       item.addEventListener('mouseout', (evt) => {
         if (item.classList.contains('is-open')) {
@@ -104,9 +104,9 @@ const openMenu = () => {
       menu.classList.toggle('is-open');
       header.classList.toggle('is-open');
       openItem();
-    })
+    });
   }
-}
+};
 
 const closeItemOnPageClick = () => {
   document.body.addEventListener('click', (evt) => {
@@ -119,7 +119,7 @@ const closeItemOnPageClick = () => {
 const initMenu = () => {
   openMenu();
   closeItemOnPageClick();
-}
+};
 
-export { initMenu }
+export {initMenu};
 

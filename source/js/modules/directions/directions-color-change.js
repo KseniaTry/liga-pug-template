@@ -1,4 +1,4 @@
-import { DEFAULT_CARD_COLOR } from "../../const";
+import {DEFAULT_CARD_COLOR} from '../../const';
 
 const directionsCards = document.querySelectorAll('[data-class="direction-card"]');
 
@@ -8,27 +8,27 @@ const changeCardsColor = () => {
     const backgroundColor = card.dataset.color;
     card.style.backgroundColor = backgroundColor;
   });
-}
+};
 
 // сброс цвета карточек (нужно для desktop)
 const resetCardsColor = () => {
   directionsCards.forEach((card) => {
     card.style.backgroundColor = DEFAULT_CARD_COLOR;
   });
-}
+};
 
 // добавление цветов карточкам на desktop
 const addCardsHover = () => {
   directionsCards.forEach((card) => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
       const cardColor = card.dataset.color;
-      this.style.backgroundColor = cardColor;
+      card.style.backgroundColor = cardColor;
     });
 
-    card.addEventListener('mouseleave', function() {
-      this.style.backgroundColor = '';
+    card.addEventListener('mouseleave', function () {
+      card.style.backgroundColor = '';
+    });
   });
-  })
-}
+};
 
-export { changeCardsColor, resetCardsColor, addCardsHover }
+export {changeCardsColor, resetCardsColor, addCardsHover};

@@ -56,8 +56,6 @@
   }
 
   // swiper-wrapper
-  &__content-wrapper {}
-
   &__slide {
     @include vp-767 {
       padding-top: 85px;

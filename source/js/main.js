@@ -3,14 +3,14 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-import { initMenu } from './modules/menu/menu.js';
-import { initDirectionsSlider } from './modules/directions/directions-slider.js';
-import { initPromoSwitcher } from './modules/promo/promo-switcher.js';
+import {initMenu} from './modules/menu/menu.js';
+import {initDirectionsSlider} from './modules/directions/directions-slider.js';
+import {initPromoSwitcher} from './modules/promo/promo-switcher.js';
 import './vendor.js';
-import { initPromoSlider } from './modules/promo/promo-slider.js';
-import { addCardsHover } from './modules/directions/directions-color-change.js';
-import { addPlatformRateColors } from './modules/work-card.js';
-import { hideMobileNavItems } from './modules/menu/nav-hide.js';
+import {initPromoSlider} from './modules/promo/promo-slider.js';
+import {addCardsHover} from './modules/directions/directions-color-change.js';
+import {addPlatformRateColors} from './modules/work-card.js';
+import {hideMobileNavItems} from './modules/menu/nav-hide.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {

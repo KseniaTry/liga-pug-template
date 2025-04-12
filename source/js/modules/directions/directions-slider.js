@@ -1,6 +1,6 @@
-import { addSwiperClass, removeSwiperClass } from '../../utils/swiper-class-switcher';
-import { changeCardsColor, resetCardsColor } from './directions-color-change';
-import { TABLET_MIN_WIDTH } from '../../const';
+import {addSwiperClass, removeSwiperClass} from '../../utils/swiper-class-switcher';
+import {changeCardsColor, resetCardsColor} from './directions-color-change';
+import {TABLET_MIN_WIDTH} from '../../const';
 
 // инициализация свайпера происходит только при переключении на мобильную версию
 const directionsSlider = document.querySelector('[data-class="directions-swiper"]');
@@ -21,7 +21,7 @@ const initDirectionsSwiper = () => {
       nextEl: '.directions__button--next',
     },
   });
-}
+};
 
 const breakpointChecker = () => {
   if (breakpoint.matches) {
@@ -45,4 +45,4 @@ const initDirectionsSlider = () => {
   }
 };
 
-export { initDirectionsSlider }
+export {initDirectionsSlider};

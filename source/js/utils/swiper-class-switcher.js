@@ -16,4 +16,4 @@ const removeSwiperClass = (swiperClass, swiperWrapperClass, swiperSlideClass) =>
   });
 };
 
-export { addSwiperClass, removeSwiperClass }
+export {addSwiperClass, removeSwiperClass};

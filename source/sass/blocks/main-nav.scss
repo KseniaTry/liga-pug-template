@@ -2,13 +2,11 @@
   width: size(860px);
 
   @include vp-1023 {
-    width: 56%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
-  &__wrapper {}
 
   &__list {
     margin: 0;
@@ -67,7 +65,7 @@
       order: 2;
       border: none;
       background-color: $color-default-black;
-      mask-image: url(./../../img/svg/burger-menu.svg);
+      mask-image: url("./../../img/svg/burger-menu.svg");
       mask-position: center;
       mask-repeat: no-repeat;
       mask-size: 22px 12px;
@@ -75,7 +73,7 @@
       &.is-open {
         width: 25px;
         height: 25px;
-        mask-image: url(./../../img/svg/close-menu.svg);
+        mask-image: url("./../../img/svg/close-menu.svg");
         mask-size: 25px 25px;
       }
     }

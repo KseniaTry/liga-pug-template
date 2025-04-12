@@ -118,7 +118,7 @@
       color: $color-dim-gray;
 
       @include vp-1023 {
-       font-size: 8px;
+        font-size: 8px;
       }
 
       @include vp-767 {

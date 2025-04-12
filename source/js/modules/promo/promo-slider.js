@@ -1,5 +1,5 @@
-import { addSwiperClass, removeSwiperClass } from "../../utils/swiper-class-switcher";
-import { TABLET_MIN_WIDTH } from "../../const";
+import {addSwiperClass, removeSwiperClass} from '../../utils/swiper-class-switcher';
+import {TABLET_MIN_WIDTH} from '../../const';
 
 const promoSlider = document.querySelector('[data-class="promo-content"]');
 const breakpoint = window.matchMedia(`(max-width: ${TABLET_MIN_WIDTH - 1}px)`);
@@ -18,7 +18,7 @@ const initPromoSwiper = () => {
       nextEl: '.promo__button--next',
     },
   });
-}
+};
 
 const breakpointChecker = () => {
   if (breakpoint.matches) {
@@ -39,4 +39,4 @@ const initPromoSlider = () => {
   }
 };
 
-export { initPromoSlider }
+export {initPromoSlider};
