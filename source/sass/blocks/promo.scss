@@ -1,5 +1,5 @@
 .promo {
-  padding: 0 0 size(123px);
+  padding: 0 0 size(119px);
 
   @include vp-767 {
     padding: 80px 0 141px;
@@ -20,11 +20,11 @@
     }
 
     h2 {
-      margin: size(6px) 0 size(20px) size(56px);
+      margin: size(6px) 0 size(15px) size(54px);
       width: 92%;
 
       font-size: size(40px);
-      line-height: 115%; // 100% по макету не прошло бы PP, 115 ok
+      line-height: 120%;
       font-weight: 700;
       color: $color-night-rider-2;
       text-align: center;
@@ -70,6 +70,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+    gap: size(20px);
 
     @include vp-767 {
       position: relative;
@@ -77,6 +78,7 @@
       margin: 0 auto;
       width: 280px;
       height: 439px;
+      gap: 0;
 
       border-radius: 34px;
       border: 1px solid $color-whisper-2;
@@ -96,11 +98,14 @@
   &__image-wrapper {
     width: size(425px);
     height: size(425px);
+    margin-left: size(-34px);
+    margin-top: size(-20px);
 
     @include vp-767 {
       position: absolute;
       top: -90px;
       left: 0;
+      margin: 0;
       width: 280px;
       height: 280px;
     }
@@ -135,7 +140,7 @@
     h3 {
       margin-bottom: size(21px);
       font-size: size(30px);
-      line-height: 110%;
+      line-height: 115%;
       font-weight: 800;
       color: $color-accent-main;
 
@@ -185,7 +190,7 @@
 
   &__content-button {
     position: relative;
-    padding: size(28px) size(27px) size(24px);
+    padding: size(24px) size(27px);
     margin-bottom: size(47px);
     border-radius: size(30px);
     background-color: $color-snow;
@@ -265,7 +270,7 @@
       margin: 0;
       margin-bottom: 4px;
       font-size: size(25px);
-      line-height: size(25.6px);
+      line-height: 160%;
       font-weight: 400;
       color: $color-seal-brown;
 
@@ -279,7 +284,7 @@
     p {
       margin: 0;
       font-size: size(16px);
-      line-height: size(25.6px);
+      line-height: 160%;
       color: $color-dim-gray;
 
       @include vp-1023 {
