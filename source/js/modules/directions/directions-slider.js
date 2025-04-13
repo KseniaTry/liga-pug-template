@@ -12,8 +12,8 @@ let directionsSwiper;
 const initDirectionsSwiper = () => {
   directionsSwiper = new Swiper(directionsSlider, {
     slideClass: 'directions__card',
-    slidesPerView: 1.2,
-    spaceBetween: 12,
+    slidesPerView: 'auto',
+    spaceBetween: 10,
     loop: true,
     loopedSlides: 1,
     navigation: {
