@@ -2,11 +2,12 @@
   padding: size(3px) 0 size(298px);
 
   @include vp-767 {
-    padding: 3px 0 98px;
+    padding: 3px 0 105px;
   }
 
   &__main-wrapper {
     @include vp-767 {
+      position: relative; // для кнопок переключения слайдов
       padding: 0;
     }
 
@@ -33,6 +34,10 @@
     }
   }
 
+  &__swiper {
+
+  }
+
   &__swiper-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +61,7 @@
     }
 
     @include vp-767 {
-      width: 280px;
+      width: 278px; // 280
     }
   }
 
@@ -64,20 +69,19 @@
     display: none;
 
     @include vp-767 {
-      display: block;
+      display: flex;
+      position: absolute;
+      bottom: -52px;
+      left: 50%;
+      width: 135px;
     }
   }
 
   &__swiper-navigation .swiper-button-next {
-    right: 29%;
+    right: 50%;
   }
 
   &__swiper-navigation .swiper-button-prev {
-    left: 29%;
-  }
-
-  &__button--prev,
-  &__button--next {
-    top: 49%;
+    left: -50%;
   }
 }

@@ -2,7 +2,7 @@
   padding: 0 0 size(119px);
 
   @include vp-767 {
-    padding: 80px 0 141px;
+    padding: 73px 0 137px; // 80
   }
 
   &__promo-wrapper {
@@ -12,6 +12,7 @@
     box-shadow: 0 4px 20px 0 rgba(134, 134, 134, 0.01);
 
     @include vp-767 {
+      position: relative; // для кнопок переключения слайдера
       padding: 0;
 
       border: none;
@@ -38,7 +39,6 @@
         margin-bottom: 25px;
 
         font-size: 21px;
-        line-height: 115%;
         text-align: start;
       }
     }
@@ -58,7 +58,7 @@
   // swiper-wrapper
   &__slide {
     @include vp-767 {
-      padding-top: 85px;
+      padding-top: 10px; // 85
     }
   }
 
@@ -101,8 +101,8 @@
 
     @include vp-767 {
       position: absolute;
-      top: -90px;
-      left: 0;
+      top: -93px;
+      left: -9px;
       margin: 0;
       width: 280px;
       height: 280px;
@@ -130,7 +130,7 @@
     @include vp-767 {
       margin-top: auto;
       width: 100%;
-      height: 168px;
+      height: 176px; // 168
       overflow-y: scroll;
       overflow-x: hidden;
     }
@@ -148,10 +148,9 @@
       }
 
       @include vp-767 {
-        margin: 0;
-        margin-bottom: 14px;
+        margin: 8px 0 13px;
         font-size: 18px;
-        line-height: 18px;
+        line-height: 118%;
       }
     }
 
@@ -168,7 +167,7 @@
       @include vp-767 {
         margin: 0;
         font-size: 14px;
-        line-height: 22.4px;
+        line-height: 160%;
       }
     }
   }
@@ -297,20 +296,19 @@
     display: none;
 
     @include vp-767 {
-      display: block;
+      display: flex;
+      position: absolute;
+      bottom: -56px;
+      left: 50%;
+      width: 135px;
     }
   }
 
   &__swiper-navigation .swiper-button-next {
-    right: 29%;
+    right: 50%;
   }
 
   &__swiper-navigation .swiper-button-prev {
-    left: 29%;
-  }
-
-  &__button--prev,
-  &__button--next {
-    top: 96%;
+    left: -50%;
   }
 }

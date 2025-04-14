@@ -4,7 +4,7 @@
   color: $color-snow;
 
   @include vp-767 {
-    padding: 20px 0 100px;
+    padding: 28px 0 100px;
   }
 
   &__main-wrapper {
@@ -62,7 +62,7 @@
     margin-left: size(7px);
 
     @include vp-767 {
-      margin-left: 0;
+      margin: 25px 0 12px 0;
       font-size: 16px;
       line-height: 160%;
     }
@@ -86,6 +86,7 @@
   &__nav {
     @include vp-767 {
       padding: 0 6.25%;
+      margin-top: 17px;
     }
   }
 
@@ -128,6 +129,7 @@
     }
 
     @include vp-767 {
+      margin-bottom: 25px;
       font-size: 20px;
       line-height: 120%;
     }

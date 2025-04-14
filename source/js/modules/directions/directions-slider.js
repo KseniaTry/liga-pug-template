@@ -13,7 +13,7 @@ const initDirectionsSwiper = () => {
   directionsSwiper = new Swiper(directionsSlider, {
     slideClass: 'directions__card',
     slidesPerView: 'auto',
-    spaceBetween: 10,
+    spaceBetween: 8,
     loop: true,
     loopedSlides: 1,
     navigation: {
@@ -24,6 +24,8 @@ const initDirectionsSwiper = () => {
 };
 
 const breakpointChecker = () => {
+  console.log(breakpoint.matches);
+
   if (breakpoint.matches) {
     changeCardsColor();
     addSwiperClass(directionsSlider, directionsSwiperWrapper, directionsSlides);
@@ -38,11 +40,11 @@ const breakpointChecker = () => {
 const initDirectionsSlider = () => {
   breakpoint.addEventListener('change', breakpointChecker);
 
-  if (window.innerWidth < TABLET_MIN_WIDTH) {
-    changeCardsColor();
-    addSwiperClass(directionsSlider, directionsSwiperWrapper, directionsSlides);
-    initDirectionsSwiper();
-  }
+  // if (window.innerWidth < TABLET_MIN_WIDTH) {
+  //   changeCardsColor();
+  //   addSwiperClass(directionsSlider, directionsSwiperWrapper, directionsSlides);
+  //   initDirectionsSwiper();
+  // }
 };
 
 export {initDirectionsSlider};

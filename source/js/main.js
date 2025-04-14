@@ -22,6 +22,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  initMenu();
+  initDirectionsSlider();
+  initPromoSlider();
+  hideMobileNavItems();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -29,15 +33,15 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     uploadFile();
     uploadImageDrop();
-    const select = new CustomSelect();
-    select.init();
-    const form = new Form();
-    window.form = form;
-    form.init();
-    initMenu();
-    initDirectionsSlider();
+    // const select = new CustomSelect();
+    // select.init();
+    // const form = new Form();
+    // window.form = form;
+    // form.init();
+    // initMenu();
+    // initDirectionsSlider();
     initPromoSwitcher();
-    initPromoSlider();
+    // initPromoSlider();
     addCardsHover();
     addPlatformRateColors();
     hideMobileNavItems();
