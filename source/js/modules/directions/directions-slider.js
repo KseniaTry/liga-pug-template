@@ -13,7 +13,8 @@ const initDirectionsSwiper = () => {
   directionsSwiper = new Swiper(directionsSlider, {
     slideClass: 'directions__card',
     slidesPerView: 'auto',
-    spaceBetween: 8,
+    spaceBetween: 11,
+    centeredSlides: true,
     loop: true,
     loopedSlides: 1,
     navigation: {

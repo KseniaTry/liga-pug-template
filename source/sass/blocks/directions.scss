@@ -2,7 +2,7 @@
   padding: size(3px) 0 size(298px);
 
   @include vp-767 {
-    padding: 3px 0 105px;
+    padding: 3px 0 75px;
   }
 
   &__main-wrapper {
@@ -34,10 +34,6 @@
     }
   }
 
-  &__swiper {
-
-  }
-
   &__swiper-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -48,8 +44,8 @@
 
     @include vp-767 {
       flex-wrap: nowrap;
-      margin: 0 auto;
-      width: 280px;
+      gap: 0;
+      // margin: 0 auto;
     }
   }
 
@@ -61,8 +57,12 @@
     }
 
     @include vp-767 {
-      width: 278px; // 280
+      width: 280px;
     }
+  }
+
+  &__card.swiper-slide-active .direction-card {
+    margin-bottom: 30px;
   }
 
   &__swiper-navigation {
@@ -71,7 +71,7 @@
     @include vp-767 {
       display: flex;
       position: absolute;
-      bottom: -52px;
+      bottom: -22px;
       left: 50%;
       width: 135px;
     }
