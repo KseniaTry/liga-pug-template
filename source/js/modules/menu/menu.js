@@ -1,4 +1,4 @@
-import {DESKTOP_MIN_WIDTH} from '../../const';
+import { DESKTOP_MIN_WIDTH } from '../../const';
 
 const menuItems = document.querySelectorAll('[data-name="menu-item"]');
 const breakpoint = window.matchMedia(`(min-width: ${DESKTOP_MIN_WIDTH}px)`);
@@ -91,9 +91,7 @@ const openItemByHover = () => {
   });
 };
 
-const openMenu = () => {
-  document.addEventListener('keydown', onDocumentEscKeyDown);
-
+const breakpointChecker = () => {
   if (breakpoint.matches) {
     openItem();
     openItemByHover();
@@ -106,7 +104,7 @@ const openMenu = () => {
       openItem();
     });
   }
-};
+}
 
 const closeItemOnPageClick = () => {
   document.body.addEventListener('click', (evt) => {
@@ -117,9 +115,11 @@ const closeItemOnPageClick = () => {
 };
 
 const initMenu = () => {
-  openMenu();
+  document.addEventListener('keydown', onDocumentEscKeyDown);
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
   closeItemOnPageClick();
 };
 
-export {initMenu};
+export { initMenu };
 

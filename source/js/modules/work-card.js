@@ -9,4 +9,4 @@ const addPlatformRateColors = () => {
   });
 };
 
-export {addPlatformRateColors};
+export { addPlatformRateColors };

@@ -31,7 +31,8 @@ const breakpointChecker = () => {
 };
 
 const initPromoSlider = () => {
-  breakpoint.addEventListener('change', breakpointChecker);
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 
   if (window.innerWidth < TABLET_MIN_WIDTH) {
     addSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);

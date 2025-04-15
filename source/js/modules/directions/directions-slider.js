@@ -24,8 +24,6 @@ const initDirectionsSwiper = () => {
 };
 
 const breakpointChecker = () => {
-  console.log(breakpoint.matches);
-
   if (breakpoint.matches) {
     changeCardsColor();
     addSwiperClass(directionsSlider, directionsSwiperWrapper, directionsSlides);
@@ -38,13 +36,14 @@ const breakpointChecker = () => {
 };
 
 const initDirectionsSlider = () => {
-  breakpoint.addEventListener('change', breakpointChecker);
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 
-  // if (window.innerWidth < TABLET_MIN_WIDTH) {
-  //   changeCardsColor();
-  //   addSwiperClass(directionsSlider, directionsSwiperWrapper, directionsSlides);
-  //   initDirectionsSwiper();
-  // }
+  if (window.innerWidth < TABLET_MIN_WIDTH) {
+    changeCardsColor();
+    addSwiperClass(directionsSlider, directionsSwiperWrapper, directionsSlides);
+    initDirectionsSwiper();
+  }
 };
 
 export {initDirectionsSlider};
