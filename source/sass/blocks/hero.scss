@@ -1,5 +1,5 @@
 .hero {
-  padding: size(20px) 0 size(300px);
+  padding: size(27px) 0 size(292px);
 
   @include vp-767 {
     padding: 55px 0 118px;
@@ -121,8 +121,8 @@
 
   &__work-card {
     position: absolute;
-    top: size(495px);
-    right: size(392px);
+    top: size(494px);
+    right: size(391px);
 
     @include vp-1023 {
       top: 270px;

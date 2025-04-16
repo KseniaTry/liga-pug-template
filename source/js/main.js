@@ -17,12 +17,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-
   mobileVhFix();
 
   // Modules
   // ---------------------------------
   addPlatformRateColors();
+  addCardsHover();
+  hideMobileNavItems();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -39,8 +40,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initDirectionsSlider();
     initPromoSlider();
     initPromoSwitcher();
-    addCardsHover();
-    hideMobileNavItems();
   });
 });
 

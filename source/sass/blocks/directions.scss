@@ -1,5 +1,5 @@
 .directions {
-  padding: size(3px) 0 size(298px);
+  padding: size(3px) 0 size(292px);
 
   @include vp-767 {
     padding: 3px 0 75px;
@@ -13,7 +13,7 @@
 
     h2 {
       margin: 0;
-      margin-bottom: size(52px);
+      margin-bottom: size(65px);
 
       font-size: size(40px);
       line-height: 100%;
@@ -39,13 +39,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    column-gap: size(18px);
+    column-gap: size(14px);
     row-gap: size(47px);
 
     @include vp-767 {
       flex-wrap: nowrap;
       gap: 0;
-      // margin: 0 auto;
     }
   }
 
