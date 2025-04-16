@@ -17,6 +17,7 @@ const closeItem = (className) => {
     if (item.classList.contains(className)) {
       item.classList.remove(className);
       menuContent.classList.remove(className);
+      pageBody.classList.remove('scroll-lock');
     }
   });
 };
@@ -28,32 +29,41 @@ function onDocumentEscKeyDown(evt) {
   }
 }
 
+const openItemBreakpointChecker = (item) => {
+  const menuContent = item.querySelector('[data-name="menu-content-list"]');
+
+  if (breakpoint.matches) {
+    // удаление класса открытия по hover если был клик по пункту меню
+    if (item.classList.contains('is-open-by-hover')) {
+      item.classList.remove('is-open-by-hover');
+      menuContent.classList.remove('is-open-by-hover');
+      pageBody.classList.remove('scroll-lock');
+    }
+    // закрытие и открытие пункта при клике на него
+    item.classList.toggle('is-open');
+    menuContent.classList.toggle('is-open');
+    pageBody.classList.toggle('scroll-lock');
+    // удаление слушателей события hover
+    item.removeEventListener('mouseover');
+    item.removeEventListener('mouseout');
+  } else {
+    // закрытие и открытие пункта при клике на него
+    item.classList.toggle('is-open');
+    menuContent.classList.toggle('is-open');
+    pageBody.classList.add('scroll-lock');
+  }
+}
+
 // открытие меню по клику
 const openItem = () => {
   menuItems.forEach((item) => {
     item.addEventListener(('click'), () => {
-      const menuContent = item.querySelector('[data-name="menu-content-list"]');
-
       // закрытие текущего пункта при клике на другой пункт
       if (!item.classList.contains('is-open')) {
         closeItem('is-open');
       }
-
-      // удаление класса открытия по hover если был клик по пункту меню
-      if (item.classList.contains('is-open-by-hover')) {
-        item.classList.remove('is-open-by-hover');
-        menuContent.classList.remove('is-open-by-hover');
-      }
-
-      // закрытие и открытие пункта при клике на него
-      item.classList.toggle('is-open');
-      menuContent.classList.toggle('is-open');
-      pageBody.classList.toggle('scroll-lock');
-
-      if (breakpoint.matches) {
-        item.removeEventListener('mouseover');
-        item.removeEventListener('mouseout');
-      }
+      breakpoint.addListener(openItemBreakpointChecker);
+      openItemBreakpointChecker(item);
     });
   });
 };
@@ -73,6 +83,7 @@ const openItemByHover = () => {
           } else {
             menuItem.classList.remove('is-open');
             menuContent.classList.remove('is-open');
+            pageBody.classList.remove('scroll-lock');
           }
         });
 
@@ -104,6 +115,7 @@ const breakpointChecker = () => {
       menuButton.classList.toggle('is-open');
       menu.classList.toggle('is-open');
       header.classList.toggle('is-open');
+      pageBody.classList.toggle('scroll-lock');
       openItem();
     });
   }
