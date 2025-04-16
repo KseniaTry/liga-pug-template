@@ -27,7 +27,8 @@ const breakpointChecker = () => {
 };
 
 const hideMobileNavItems = () => {
-  breakpoint.addEventListener('change', breakpointChecker);
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 
   if (window.innerWidth < DESKTOP_MIN_WIDTH) {
     hideItems();

@@ -5,6 +5,7 @@ const breakpoint = window.matchMedia(`(min-width: ${DESKTOP_MIN_WIDTH}px)`);
 const menuButton = document.querySelector('[data-name="menu-button"]');
 const menu = document.querySelector('[data-name="menu"]');
 const header = document.querySelector('[data-name="header"]');
+const pageBody = document.body;
 
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
@@ -47,6 +48,7 @@ const openItem = () => {
       // закрытие и открытие пункта при клике на него
       item.classList.toggle('is-open');
       menuContent.classList.toggle('is-open');
+      pageBody.classList.toggle('scroll-lock');
 
       if (breakpoint.matches) {
         item.removeEventListener('mouseover');
@@ -78,6 +80,7 @@ const openItemByHover = () => {
         const menuContent = item.querySelector('[data-name="menu-content-list"]');
         item.classList.toggle('is-open-by-hover');
         menuContent.classList.toggle('is-open-by-hover');
+        pageBody.classList.toggle('scroll-lock');
       });
 
       item.addEventListener('mouseout', (evt) => {
