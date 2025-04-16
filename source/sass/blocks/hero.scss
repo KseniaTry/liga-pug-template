@@ -7,13 +7,15 @@
 
   &__overlay-wrapper {
     position: absolute;
-    top: size(681px);
+    top: size(781px);
     width: 100%;
     height: size(1426px);
+    z-index: -5;
 
     @include vp-767 {
       top: 67px;
       height: 562px;
+      transform: scale(1.5);
     }
 
     img {
