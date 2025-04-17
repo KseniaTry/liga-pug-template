@@ -45,7 +45,7 @@
   }
 
   &__icon-wrapper {
-    width: size(55px);
+    width: size(64px);
     height: size(55px);
 
     @include vp-767 {
@@ -54,7 +54,7 @@
     }
 
     svg {
-      width: size(55px);
+      width: size(64px);
       height: size(55px);
 
       @include vp-767 {
