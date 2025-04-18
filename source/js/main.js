@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-  mobileVhFix();
+  // mobileVhFix();
 
   // Modules
   // ---------------------------------

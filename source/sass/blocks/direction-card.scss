@@ -1,7 +1,7 @@
 .direction-card {
   width: size(414px);
   height: size(425px);
-  padding: size(55px) size(20px) size(95px);
+  padding: size(55px) size(10px) size(95px) size(21px);
   background-color: $color-default-white;
   border-radius: size(56px);
   display: flex;
@@ -18,8 +18,8 @@
   @include vp-767 {
     width: 280px;
     height: 280px;
-    padding: 39px 1px 52px 19px; //  37px 5px 52px 15px;
-    column-gap: 18px; // 16
+    padding: 39px 1px 52px 19px;
+    column-gap: 18px;
     row-gap: 44px;
     border-radius: 35px;
     overflow: hidden;
@@ -27,7 +27,7 @@
 
   h3 {
     margin: 0;
-    width: 75%;
+    width: 70%;
     font-size: size(25px);
     line-height: 100%;
     font-weight: 500;
@@ -75,40 +75,34 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: size(3px);
-    column-gap: 12%;
+    column-gap: size(19px);
 
     @include vp-767 {
       height: fit-content;
       row-gap: 0;
-      column-gap: 9%; // 10%
+      column-gap: 7px;
     }
   }
 
   &__item {
-    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: size(19px);
 
-    &:nth-child(odd)::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: size(6px);
-      right: size(-30px);
-      width: size(15.56px);
-      height: size(15.56px);
+    @include vp-767 {
+      gap: 7px;
+    }
 
-      mask-image: url("../../img/svg/star-divider.svg");
-      background-color: $color-dim-gray-2;
-      mask-size: size(16px) size(16px);
-      mask-repeat: no-repeat;
-      mask-position: center;
+    svg {
+      width: size(16px);
+      height: size(16px);
+      color: $color-dim-gray-2;
 
       @include vp-767 {
-        top: 6px;
-        right: -18px;
-        background-color: $color-default-white;
         width: 10px;
         height: 10px;
-        mask-size: 10px 10px;
+        color: $color-default-white;
       }
     }
 
@@ -137,8 +131,8 @@
       color: $color-default-white;
     }
 
-    .direction-card__item:nth-child(odd)::after {
-      background-color: $color-default-white;
+    .direction-card__item svg {
+      color: $color-default-white;
     }
   }
 }
