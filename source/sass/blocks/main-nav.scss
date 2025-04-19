@@ -54,27 +54,49 @@
     }
   }
 
+  // кнопка закрытия / открытия меню
   &__toggle {
     display: none;
 
     @include vp-1023 {
-      display: block;
-      width: 22px;
-      height: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      width: 25px;
+      height: 25px;
       order: 2;
       border: none;
-      background-color: $color-default-black;
-      mask-image: url("./../../img/svg/burger-menu.svg");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: 22px 12px;
-
-      &.is-open {
-        width: 25px;
-        height: 25px;
-        mask-image: url("./../../img/svg/close-menu.svg");
-        mask-size: 25px 25px;
-      }
+      background-color: transparent;
     }
+  }
+
+  &__toggle-burger-icon-wrapper {
+    width: 22px;
+    height: 12px;
+
+    svg {
+      width: 22px;
+      height: 12px;
+    }
+  }
+
+  &__toggle-close-icon-wrapper {
+    display: none;
+  }
+
+  &__toggle.is-open .main-nav__toggle-close-icon-wrapper {
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__toggle.is-open .main-nav__toggle-burger-icon-wrapper {
+    display: none;
   }
 }

@@ -135,6 +135,10 @@ mixin header(headerMods, currentUrl)
               img(src="img/content/logo/logo-mobile.svg" width="23" height="27" alt="Логотип FindEdu")
         nav.main-nav(aria-label="Основное меню сайта")
           button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false", data-name="menu-button")
+            span.main-nav__toggle-burger-icon-wrapper
+              +icon("burger-menu", 22, 12)
+            span.main-nav__toggle-close-icon-wrapper
+              +icon("close-menu", 25, 25)
           .main-nav__wrapper
             ul.main-nav__list
               each link in headerLinks
