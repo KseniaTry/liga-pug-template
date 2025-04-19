@@ -1,4 +1,4 @@
-import { mobileVhFix } from './utils/mobile-vh-fix.js';
+// import { mobileVhFix } from './utils/mobile-vh-fix.js';
 import { initModals } from './modules/modals/init-modals';
 import { Form } from './modules/form-validate/form';
 import { CustomSelect } from './modules/select/custom-select';

@@ -68,7 +68,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    gap: size(20px);
 
     @include vp-767 {
       position: relative;
@@ -96,8 +95,8 @@
   &__image-wrapper {
     width: size(425px);
     height: size(425px);
-    margin-left: size(-34px);
-    margin-top: size(-20px);
+    margin-left: size(-25px);
+    margin-top: size(53px);
 
     @include vp-767 {
       position: absolute;
@@ -122,6 +121,7 @@
 
   &__description-wrapper {
     width: size(338px);
+    margin-top: size(-52px);
 
     @include vp-1023 {
       width: 100%;
@@ -130,7 +130,7 @@
     @include vp-767 {
       margin-top: auto;
       width: 100%;
-      height: 176px; // 168
+      height: 176px;
       overflow-y: scroll;
       overflow-x: hidden;
     }
