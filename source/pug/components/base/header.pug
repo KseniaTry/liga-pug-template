@@ -152,10 +152,14 @@ mixin header(headerMods, currentUrl)
         ul.header__menu-list(data-name="menu-list")
           each item in headerNavLinks
             li.header__menu-item(data-name="menu-item", data-id=item.title)
-              a.header__menu-link(href=item.href)= item.title
+              .header__menu-item-wrapper
+                a.header__menu-link(href=item.href)= item.title
+                span.header__menu-icon-wrapper
+                  +icon("triangle-down", 10, 10)
               if item.sublevel
                 ul.header__menu-content-list(data-name="menu-content-list")
                   each subitem in item.items
                     li.header__menu-content-item
                       a.header__menu-content-link(href=subitem.href)= subitem.title
+
 

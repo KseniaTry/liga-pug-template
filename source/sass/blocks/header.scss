@@ -1,5 +1,5 @@
 .header {
-  padding: size(39px) 0 size(46px);
+  padding: size(40px) 0 size(49px);
   background-color: $color-default-white;
 
   @include vp-1023 {
@@ -21,7 +21,7 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: size(37px);
+    gap: size(40px);
   }
 
   &__header-wrapper {
@@ -87,7 +87,7 @@
     position: relative;
     width: 100%;
     padding: 0 size(321px);
-    padding-top: size(50px);
+    padding-top: size(52px);
     border-top: size(0.7px) solid $color-whisper;
 
     @include vp-1023 {
@@ -136,7 +136,6 @@
 
   &__menu-item {
     position: relative;
-    padding-right: size(35px);
 
     @include vp-1023 {
       padding: 23px 10%;
@@ -149,35 +148,63 @@
 
     &::after {
       content: "";
-      display: block;
       position: absolute;
-      top: size(9px);
-      right: 0;
-      width: size(10px);
-      height: size(10px);
-      mask-image: url("./../../img/svg/triangle-down.svg");
-      mask-size: size(10px) size(10px);
-      background-color: $color-silver;
+      top: size(-10px);
+      right: size(-49px);
+      display: block;
+      width: size(1px);
+      height: size(30px);
+      background-color: $color-whisper-3;
 
       @include vp-1023 {
-        top: 28px;
-        right: 10%;
-        width: 8px;
-        height: 8px;
-        mask-size: 8px 8px;
-      }
-
-      @include vp-767 {
-        right: 6.25%;
+        display: none;
       }
     }
   }
 
-  &__menu-item.is-open,
-  &__menu-item.is-open-by-hover {
+  &__menu-item:last-child {
     &::after {
-      transform: rotate(180deg);
-      background-color: $color-accent-main;
+      display: none;
+    }
+  }
+
+  &__menu-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: size(25px);
+  }
+
+  &__menu-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: size(10px);
+    height: size(10px);
+    color: $color-silver;
+
+    @include vp-1023 {
+      width: 8px;
+      height: 8px;
+    }
+
+    svg {
+      width: size(10px);
+      height: size(10px);
+
+      @include vp-1023 {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  &__menu-item.is-open .header__menu-icon-wrapper,
+  &__menu-item.is-open-by-hover .header__menu-icon-wrapper {
+    transform: rotate(180deg);
+
+    svg {
+      color: $color-accent-main;
     }
   }
 
@@ -201,6 +228,7 @@
   &__menu-content-list.is-open-by-hover {
     display: block;
     position: absolute;
+    top: size(20px);
     left: size(-15px);
     z-index: 10;
 
