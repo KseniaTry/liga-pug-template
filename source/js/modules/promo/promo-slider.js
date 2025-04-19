@@ -26,7 +26,9 @@ const breakpointChecker = () => {
     initPromoSwiper();
   } else {
     removeSwiperClass(promoSlider, promoSwiperWrapper, promoSlides);
-    promoSwiper.destroy();
+    if (promoSwiper !== undefined) {
+      promoSwiper.destroy();
+    }
   }
 };
 

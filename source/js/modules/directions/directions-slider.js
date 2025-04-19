@@ -1,6 +1,6 @@
-import {addSwiperClass, removeSwiperClass} from '../../utils/swiper-class-switcher';
-import {changeCardsColor, resetCardsColor} from './directions-color-change';
-import {TABLET_MIN_WIDTH} from '../../const';
+import { addSwiperClass, removeSwiperClass } from '../../utils/swiper-class-switcher';
+import { changeCardsColor, resetCardsColor } from './directions-color-change';
+import { TABLET_MIN_WIDTH } from '../../const';
 
 // инициализация свайпера происходит только при переключении на мобильную версию
 const directionsSlider = document.querySelector('[data-class="directions-swiper"]');
@@ -32,7 +32,9 @@ const breakpointChecker = () => {
   } else {
     resetCardsColor();
     removeSwiperClass(directionsSlider, directionsSwiperWrapper, directionsSlides);
-    directionsSwiper.destroy();
+    if (directionsSwiper !== undefined) {
+      directionsSwiper.destroy();
+    }
   }
 };
 
@@ -47,4 +49,4 @@ const initDirectionsSlider = () => {
   }
 };
 
-export {initDirectionsSlider};
+export { initDirectionsSlider };
