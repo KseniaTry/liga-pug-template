@@ -1,7 +1,7 @@
 .direction-card {
   width: size(414px);
   height: size(425px);
-  padding: size(55px) size(10px) size(95px) size(21px);
+  padding: size(55px) size(10px) size(95px) size(25px);
   background-color: $color-default-white;
   border-radius: size(56px);
   display: flex;
@@ -19,8 +19,8 @@
     width: 280px;
     height: 280px;
     padding: 39px 1px 52px 19px;
-    column-gap: 18px;
-    row-gap: 44px;
+    column-gap: 10px;
+    row-gap: 34px;
     border-radius: 35px;
     overflow: hidden;
   }
@@ -39,6 +39,7 @@
     }
 
     @include vp-767 {
+      margin-bottom: 10px;
       font-size: 18px;
       color: $color-default-white;
     }
@@ -49,17 +50,17 @@
     height: size(55px);
 
     @include vp-767 {
-      width: 37px;
-      height: 37px;
+      width: 47px;
+      height: 47px;
     }
 
-    svg {
+    img {
       width: size(64px);
       height: size(55px);
 
       @include vp-767 {
-        width: 37px;
-        height: 37px;
+        width: 47px;
+        height: 47px;
       }
     }
   }
@@ -75,7 +76,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: size(3px);
-    column-gap: size(19px);
+    column-gap: size(18px);
 
     @include vp-767 {
       height: fit-content;
@@ -88,7 +89,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: size(19px);
+    gap: size(18px);
 
     @include vp-767 {
       gap: 7px;
@@ -130,7 +131,6 @@
 
   // состояние карточки
   &:hover {
-
     h3,
     p {
       color: $color-default-white;

@@ -51,4 +51,6 @@ mixin directions()
                 +direction-card(direction.title, direction.id, direction.items, direction.color)
       .directions__swiper-navigation.arrows
         button.directions__button--prev.swiper-button-prev.arrows__button.arrows__button--prev(type='button', aria-label='Кнопка переключения предыдущего слайда')
+          +icon("arrow-left", 7, 12)
         button.directions__button--next.swiper-button-next.arrows__button.arrows__button--next(type='button', aria-label='Кнопка переключения следующего слайда')
+          +icon("arrow-left", 7, 12)
