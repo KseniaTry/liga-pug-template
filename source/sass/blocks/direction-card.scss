@@ -124,8 +124,13 @@
     }
   }
 
+  &__item:nth-child(even) svg {
+    display: none;
+  }
+
   // состояние карточки
   &:hover {
+
     h3,
     p {
       color: $color-default-white;

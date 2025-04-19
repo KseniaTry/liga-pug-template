@@ -44,8 +44,8 @@ const openItemBreakpointChecker = (item) => {
     menuContent.classList.toggle('is-open');
     pageBody.classList.toggle('scroll-lock');
     // удаление слушателей события hover
-    item.removeEventListener('mouseover');
-    item.removeEventListener('mouseout');
+    item.removeEventListener('mouseover', null);
+    item.removeEventListener('mouseout', null);
   } else {
     // закрытие и открытие пункта при клике на него
     item.classList.toggle('is-open');
@@ -125,6 +125,7 @@ const closeItemOnPageClick = () => {
   document.body.addEventListener('click', (evt) => {
     if (evt.target.closest('[data-name="menu"]') === null) {
       closeItem('is-open');
+      closeItem('is-open-by-hover');
     }
   });
 };
