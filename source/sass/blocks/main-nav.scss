@@ -72,8 +72,10 @@
   }
 
   &__toggle-burger-icon-wrapper {
+    opacity: 1;
     width: 22px;
     height: 12px;
+    transition: opacity 0.3s;
 
     svg {
       width: 22px;
@@ -82,13 +84,16 @@
   }
 
   &__toggle-close-icon-wrapper {
-    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 
   &__toggle.is-open .main-nav__toggle-close-icon-wrapper {
-    display: block;
     width: 25px;
     height: 25px;
+    opacity: 1;
+    transition: opacity 0.3s;
 
     svg {
       width: 25px;
@@ -97,6 +102,8 @@
   }
 
   &__toggle.is-open .main-nav__toggle-burger-icon-wrapper {
-    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 }

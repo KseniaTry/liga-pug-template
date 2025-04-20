@@ -21,7 +21,7 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: size(40px);
+    column-gap: size(40px);
   }
 
   &__header-wrapper {
@@ -91,18 +91,24 @@
     border-top: size(0.7px) solid $color-whisper;
 
     @include vp-1023 {
-      display: none;
+      width: 0;
+      opacity: 0;
+      height: 0;
+      padding: 0;
+      border: 0;
+      transition: all 0.3s;
     }
   }
 
   &__menu.is-open {
     @include vp-1023 {
-      display: block;
       position: absolute;
       top: 73px;
       left: 0;
       padding: 0;
       width: 100%;
+      height: auto;
+      opacity: 1;
       background-color: $color-magnolia;
       border-bottom-left-radius: 30px;
       border-bottom-right-radius: 30px;
@@ -118,6 +124,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
     width: size(1278px);
 
     display: flex;
@@ -140,6 +147,7 @@
     @include vp-1023 {
       padding: 23px 10%;
       border-bottom: 0.7px solid $color-whisper;
+
     }
 
     @include vp-767 {
@@ -202,6 +210,7 @@
   &__menu-item.is-open .header__menu-icon-wrapper,
   &__menu-item.is-open-by-hover .header__menu-icon-wrapper {
     transform: rotate(180deg);
+    transition: all 0.3s;
 
     svg {
       color: $color-accent-main;
@@ -212,6 +221,7 @@
   &__menu-item.is-open-by-hover &__menu-link {
     color: $color-accent-main;
     font-weight: 600;
+    transition: all 0.3s;
   }
 
   &__menu-link {
@@ -224,34 +234,41 @@
     }
   }
 
+  // контент пункта меню (саблист)
+  &__menu-content-list {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
   &__menu-content-list.is-open,
   &__menu-content-list.is-open-by-hover {
-    display: block;
-    position: absolute;
     top: size(20px);
     left: size(-15px);
     z-index: 10;
 
-    margin: 0;
-    list-style-type: none;
+    opacity: 1;
+    height: fit-content;
 
     width: size(210px);
     padding: size(15px) size(20px) size(22px);
     background-color: $color-default-white;
     border-bottom-left-radius: size(30px);
     border-bottom-right-radius: size(30px);
+    transition: all 0.3s;
 
     @include vp-1023 {
+      position: static;
       width: 100%;
       padding: 15px 0 22px;
       background-color: transparent;
-      position: static;
       padding-bottom: 0;
     }
-  }
-
-  &__menu-content-list {
-    display: none;
   }
 
   &__menu-content-item {
