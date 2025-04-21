@@ -10,6 +10,7 @@
   column-gap: size(26px);
   row-gap: size(70px);
   overflow-x: hidden;
+  transition: background-color 0.5s;
 
   @include vp-1023 {
     row-gap: 20px;
@@ -134,10 +135,12 @@
     h3,
     p {
       color: $color-default-white;
+      transition: all 0.5s;
     }
 
     .direction-card__item svg {
       color: $color-default-white;
+      transition: all 0.5s;
     }
   }
 }
