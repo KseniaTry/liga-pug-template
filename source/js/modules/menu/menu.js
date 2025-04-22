@@ -107,9 +107,11 @@ const openItemByHover = () => {
 
 const breakpointChecker = () => {
   if (breakpoint.matches) {
+    pageBody.classList.remove('scroll-lock');
     openItem();
     openItemByHover();
   } else {
+    pageBody.classList.remove('scroll-lock');
     menuButton.addEventListener('click', () => {
       menuButton.classList.toggle('is-open');
       menu.classList.toggle('is-open');
