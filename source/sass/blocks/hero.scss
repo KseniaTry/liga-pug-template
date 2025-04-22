@@ -31,19 +31,21 @@
 
   &__main-wrapper {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: size(53px);
     justify-content: space-between;
     align-items: flex-start;
+
+    @include vp-767 {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__text-wrapper {
     margin-top: size(139px);
     width: size(680px);
-
-    @include vp-1023 {
-      width: 45%;
-    }
 
     @include vp-767 {
       margin-top: 0;

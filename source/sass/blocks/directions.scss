@@ -35,26 +35,20 @@
   }
 
   &__swiper-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     column-gap: size(14px);
     row-gap: size(47px);
 
     @include vp-767 {
+      display: flex;
       flex-wrap: nowrap;
       gap: 0;
     }
   }
 
   &__card {
-    width: size(400px);
-
-    @include vp-1023 {
-      width: 30%;
-    }
-
     @include vp-767 {
       width: 280px;
     }
